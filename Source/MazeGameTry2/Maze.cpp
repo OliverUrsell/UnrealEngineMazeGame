@@ -3,6 +3,10 @@
 
 #include "Maze.h"
 
+#include <string>
+#include <vector>
+#include "MazeNode.h"
+
 // Sets default values
 AMaze::AMaze()
 {
@@ -11,11 +15,47 @@ AMaze::AMaze()
 
 }
 
-// Called when the game starts or when spawned
+AMaze::~AMaze()
+{
+	for (std::vector<MazeNode*> Row : Nodes)
+	{
+		for (const MazeNode* MazeNode : Row)
+		{
+			delete(MazeNode);
+		}
+
+		Row.clear();
+	}
+	Nodes.clear();
+}
+
+MazeNode* AMaze::GetNodeAtPosition(const int X, const int Y) const
+{
+	return this->Nodes[Y][X];
+}
+
+void AMaze::InitialiseNodes()
+{
+	// Initialise our nodes 2D vector
+	for(int i = 0; i <= this->Height; i++)
+	{
+		std::vector<MazeNode*> Row;
+		for(int j = 0; j <= this->Width; j++)
+		{
+			Row.push_back(new MazeNode(j, i));
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::White, FString::Printf(TEXT("%d %d"), j, i));
+		}
+		Nodes.push_back(Row);
+	}
+}
+
+// Called when the game starts or wheßn spawned
 void AMaze::BeginPlay()
 {
 	Super::BeginPlay();
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::White, TEXT("Hello from Rider!"));
+
+	this->InitialiseNodes();
 }
 
 // Called every frame
