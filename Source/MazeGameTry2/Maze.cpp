@@ -43,25 +43,24 @@ void AMaze::InitialiseNodes()
 		for(int j = 0; j <= this->Width; j++)
 		{
 			Row.push_back(new MazeNode(j, i));
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::White, FString::Printf(TEXT("%d %d"), j, i));
 		}
 		Nodes.push_back(Row);
 	}
 }
 
-// Called when the game starts or wheßn spawned
+// Called when the game starts or when spawned
 void AMaze::BeginPlay()
 {
 	Super::BeginPlay();
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::White, TEXT("Hello from Rider!"));
 
 	this->InitialiseNodes();
+	
+	GetWorld()->SpawnActor<AActor>(YourActorBP, GetActorLocation(), GetActorRotation());
 }
 
 // Called every frame
 void AMaze::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 

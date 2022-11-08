@@ -28,7 +28,9 @@ public:
 	
 	UPROPERTY(EditAnywhere)
 	int Height = 10;
-	
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> YourActorBP;
 
 protected:
 	// Called when the game starts or when spawned
