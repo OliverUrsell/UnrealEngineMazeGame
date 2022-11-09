@@ -30,7 +30,7 @@ public:
 	int Height = 10;
 
 	UPROPERTY(EditAnywhere)
-	TSubclassOf<AActor> YourActorBP;
+	TSubclassOf<AActor> MazeGridBP;
 
 protected:
 	// Called when the game starts or when spawned

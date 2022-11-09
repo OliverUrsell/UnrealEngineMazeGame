@@ -55,7 +55,7 @@ void AMaze::BeginPlay()
 
 	this->InitialiseNodes();
 	
-	GetWorld()->SpawnActor<AActor>(YourActorBP, GetActorLocation(), GetActorRotation());
+	GetWorld()->SpawnActor<AActor>(MazeGridBP, GetActorLocation(), GetActorRotation());
 }
 
 // Called every frame
@@ -63,4 +63,3 @@ void AMaze::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
-
