@@ -30,7 +30,22 @@ public:
 	int Depth = 5;
 
 	UPROPERTY(EditAnywhere)
-	TSubclassOf<AActor> MazeGridBP;
+	TSubclassOf<AActor> ClosedWallsBP;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> CornerExitBP;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> FourExitBP;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> OneExitBP;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> StraightExitBP;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> ThreeExitBP;
 
 protected:
 	// Called when the game starts or when spawned
@@ -49,5 +64,6 @@ public:
 
 	TSubclassOf<AActor> GetActorForExits(FNodeExits Exits) const;
 	FVector MazeCoordinatesToWorldLocation(FMazeCoordinates Coordinates) const;
+	static FRotator GetRotationForExits(FNodeExits Exits);
 	
 };

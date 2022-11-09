@@ -49,7 +49,91 @@ FVector AMaze::MazeCoordinatesToWorldLocation(FMazeCoordinates Coordinates) cons
 
 TSubclassOf<AActor> AMaze::GetActorForExits(FNodeExits Exits) const
 {
-	return MazeGridBP;
+	const bool N = Exits.bNorth;
+	const bool E = Exits.bEast;
+	const bool S = Exits.bSouth;
+	const bool W = Exits.bWest;
+	
+	const int NumWalls =
+		static_cast<int>(N) +
+		static_cast<int>(E) +
+		static_cast<int>(S) +
+		static_cast<int>(W);
+
+	switch (NumWalls)
+	{
+	case 0:
+		return FourExitBP;
+	case 1:
+		return ThreeExitBP;
+	case 2:
+		if((N & S) || (E & W)){
+			return StraightExitBP;
+		}
+		else
+		{
+			return CornerExitBP;
+		}
+	case 3:
+		return OneExitBP;
+	case 4:
+		return ClosedWallsBP;
+	default:
+		throw std::runtime_error("There shouldn't be less than 0 or more than 4 walls");
+	}
+}
+
+FRotator AMaze::GetRotationForExits(FNodeExits Exits)
+{
+	const bool N = Exits.bNorth;
+	const bool E = Exits.bEast;
+	const bool S = Exits.bSouth;
+	const bool W = Exits.bWest;
+
+	if (
+		(!N & !E & !S & !W) || // No Edges
+		(N & E & S & W) || // All Edges
+		(N & E & !S & W) || // South Exit Only
+		(!N & E & !S & W) || // North and South Exit
+		(N & E & !S & !W) || // South and West Exit
+		(!N & !E & !S & W) // West Wall Only
+		)
+	{
+		return FRotator(0.0,0.0,0.0);
+	}
+
+	if(
+		(N & E & S & !W) || // West Exit Only
+		(N & !E & S & !W) || // East and West Exit
+		(!N & E & S & !W) || // North and West Exit
+		(N & !E & !S & !W) // North Wall Only
+		)
+	{
+		
+		return FRotator(0.0,90.0,0.0);
+	}
+
+	if(
+		(!N & E & S & W) || // North Exit Only
+		(!N & !E & S & W) || // North and East Exit
+		(!N & E & !S & !W) // East Wall Only
+		)
+	{
+		return FRotator(0.0,180.0,0.0);
+	}
+
+	if(
+		(N & !E & S & W) || // East Exit Only
+		(N & !E & !S & W) || // East and South Exit
+		(!N & !E & S & !W) // South Wall Only
+		)
+	{
+		return FRotator(0.0,270.0,0.0);
+	}
+
+	char Error [50];
+	sprintf(Error, "No rotation was returned for a set of exit booleans N, S, E, W: %d %d %d %d", N, S, E, W);
+	throw std::runtime_error(Error);
 }
 
 void AMaze::InitialiseNodes()
@@ -75,7 +159,7 @@ void AMaze::SpawnMazeGridBPs() const
 			GetWorld()->SpawnActor<AActor>(
 				this->GetActorForExits(Node->Exits),
 				this->MazeCoordinatesToWorldLocation(Node->Coordinates),
-				this->GetActorRotation()
+				this->GetRotationForExits(Node->Exits)
 			);
 		}
 	}
