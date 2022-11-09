@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "MazeNode.h"
 #include <vector>
+
+#include "FMazeGenerator.h"
 #include "GameFramework/Actor.h"
 #include "Maze.generated.h"
 
@@ -54,6 +56,7 @@ protected:
 private:
 	std::vector<std::vector<MazeNode*>> Nodes;
 	void InitialiseNodes();
+	void ConfigureMaze(FMazeGenerator* Generator);
 	void SpawnMazeGridBPs() const;
 	const int PrefabBlueprintWidth = 1000;
 	const int PrefabBlueprintDepth = 1000;

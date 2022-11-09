@@ -7,6 +7,8 @@
 #include <vector>
 #include "MazeNode.h"
 #include "FNodeExits.h"
+#include "FMazeGenerator.h"
+#include "SimplePrimMaze.h"
 
 // Sets default values
 AMaze::AMaze()
@@ -131,7 +133,7 @@ FRotator AMaze::GetRotationForExits(FNodeExits Exits)
 		return FRotator(0.0,270.0,0.0);
 	}
 
-	char Error [50];
+	char Error [80];
 	sprintf(Error, "No rotation was returned for a set of exit booleans N, S, E, W: %d %d %d %d", N, S, E, W);
 	throw std::runtime_error(Error);
 }
@@ -150,11 +152,16 @@ void AMaze::InitialiseNodes()
 	}
 }
 
+void AMaze::ConfigureMaze(FMazeGenerator* Generator)
+{
+	Generator->GenerateMaze(this);
+}
+
 void AMaze::SpawnMazeGridBPs() const
 {
 	for (std::vector<MazeNode*> Row : Nodes)
 	{
-		for(MazeNode* Node : Row)
+		for(const MazeNode* Node : Row)
 		{
 			GetWorld()->SpawnActor<AActor>(
 				this->GetActorForExits(Node->Exits),
@@ -171,6 +178,10 @@ void AMaze::BeginPlay()
 	Super::BeginPlay();
 
 	this->InitialiseNodes();
+
+	SimplePrimMaze g = SimplePrimMaze();
+	this->ConfigureMaze(&g);
+	
 	this->SpawnMazeGridBPs();
 }
 
