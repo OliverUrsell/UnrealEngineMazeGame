@@ -21,13 +21,13 @@ public:
 	MazeNode* Start;
 	MazeNode* End;
 
-	MazeNode* GetNodeAtPosition(int X, int Y) const;
+	MazeNode* GetNodeAtPosition(FMazeCoordinates Coordinates) const;
 	
 	UPROPERTY(EditAnywhere)
-	int Width = 10;
+	int Width = 3;
 	
 	UPROPERTY(EditAnywhere)
-	int Height = 10;
+	int Depth = 5;
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AActor> MazeGridBP;
@@ -39,15 +39,15 @@ protected:
 private:
 	std::vector<std::vector<MazeNode*>> Nodes;
 	void InitialiseNodes();
+	void SpawnMazeGridBPs() const;
+	const int PrefabBlueprintWidth = 1000;
+	const int PrefabBlueprintDepth = 1000;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	
-	struct FMazeCoordinates {
-		// 0,0 Means bottom left
-		int X;
-		int Y;
-	};
+
+	TSubclassOf<AActor> GetActorForExits(FNodeExits Exits) const;
+	FVector MazeCoordinatesToWorldLocation(FMazeCoordinates Coordinates) const;
 	
 };
