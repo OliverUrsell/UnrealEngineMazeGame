@@ -42,7 +42,7 @@ void AMaze::InitialiseNodes()
 		std::vector<MazeNode*> Row;
 		for(int j = 0; j <= this->Width; j++)
 		{
-			Row.push_back(new MazeNode(j, i));
+			Row.push_back(new MazeNode(this, FMazeCoordinates{j, i}));
 		}
 		Nodes.push_back(Row);
 	}

@@ -43,5 +43,11 @@ private:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	
+	struct FMazeCoordinates {
+		// 0,0 Means bottom left
+		int X;
+		int Y;
+	};
+	
 };

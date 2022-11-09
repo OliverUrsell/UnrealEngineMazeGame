@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Maze.h"
 
 /**
  * Class representing one cell / location in the node
@@ -10,11 +11,17 @@
 class MAZEGAMETRY2_API MazeNode
 {
 public:
-	MazeNode(int X, int Y);
+
+	struct FNodeExits
+	{
+		bool bNorth=false, bEast=false, bSouth=false, bWest=false;
+	};
 	
-	bool bNorth = false;
-	bool bSouth = false;
-	bool bEast = false;
-	bool bWest = false;
-	int X, Y;  // 0,0 is bottom left  
+	FNodeExits Exits;
+	
+	MazeNode(const AMaze* Maze, const AMaze::FMazeCoordinates);
+	MazeNode(const AMaze* Maze, const AMaze::FMazeCoordinates, FNodeExits Exits);
+	
+	AMaze::FMazeCoordinates Coordinates;
+	const AMaze* Maze;
 };

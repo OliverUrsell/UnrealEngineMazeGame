@@ -3,14 +3,17 @@
 
 #include "MazeNode.h"
 
+#include "Maze.h"
 
-MazeNode::MazeNode(const int X, const int Y)
+MazeNode::MazeNode(const AMaze* Maze, const AMaze::FMazeCoordinates Coordinates)
 {
-	bNorth = false;
-	bSouth = false;
-	bEast = false;
-	bWest = false;
+	// Use all false exits to construct a default node
+	MazeNode(Maze, Coordinates, FNodeExits{});
+}
 
-	this->X = X;
-	this->Y = Y;
+MazeNode::MazeNode(const AMaze* Maze, const AMaze::FMazeCoordinates Coordinates, FNodeExits Exits)
+{
+	this->Exits = Exits;
+	this->Coordinates = Coordinates;
+	this->Maze = Maze;
 }
