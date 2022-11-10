@@ -2,5 +2,5 @@
 
 struct FNodeExits
 {
-	bool bNorth=false, bEast=false, bSouth=false, bWest=false;
+	bool bNorth=true, bEast=true, bSouth=true, bWest=true;
 };

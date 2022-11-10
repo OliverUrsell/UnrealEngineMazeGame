@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "MazeNode.h"
+#include "FMazeNode.h"
 #include <vector>
 
 #include "FMazeGenerator.h"
@@ -20,10 +20,11 @@ public:
 	AMaze();
 	virtual ~AMaze() override;
 	
-	MazeNode* Start;
-	MazeNode* End;
+	FMazeNode* Start;
+	FMazeNode* End;
+	std::vector<std::vector<FMazeNode*>> Nodes;
 
-	MazeNode* GetNodeAtPosition(FMazeCoordinates Coordinates) const;
+	FMazeNode* GetNodeAtPosition(FMazeCoordinates Coordinates) const;
 	
 	UPROPERTY(EditAnywhere)
 	int Width = 3;
@@ -54,7 +55,6 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-	std::vector<std::vector<MazeNode*>> Nodes;
 	void InitialiseNodes();
 	void ConfigureMaze(FMazeGenerator* Generator);
 	void SpawnMazeGridBPs() const;

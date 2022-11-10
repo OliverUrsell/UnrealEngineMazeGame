@@ -11,12 +11,12 @@ class AMaze;
 /**
  * Class representing one cell / location in the node
  */
-class MAZEGAMETRY2_API MazeNode
+class MAZEGAMETRY2_API FMazeNode
 {
 public:
 	FNodeExits Exits;
 	
-	MazeNode(const AMaze* Maze, FMazeCoordinates Coordinates, FNodeExits Exits);
+	FMazeNode(const AMaze* Maze, FMazeCoordinates Coordinates, FNodeExits Exits);
 	
 	FMazeCoordinates Coordinates;
 	const AMaze* Maze;

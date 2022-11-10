@@ -5,7 +5,7 @@
 
 #include <string>
 #include <vector>
-#include "MazeNode.h"
+#include "FMazeNode.h"
 #include "FNodeExits.h"
 #include "FMazeGenerator.h"
 #include "SimplePrimMaze.h"
@@ -19,9 +19,9 @@ AMaze::AMaze()
 
 AMaze::~AMaze()
 {
-	for (std::vector<MazeNode*> Row : Nodes)
+	for (std::vector<FMazeNode*> Row : Nodes)
 	{
-		for (const MazeNode* MazeNode : Row)
+		for (const FMazeNode* MazeNode : Row)
 		{
 			delete(MazeNode);
 		}
@@ -31,7 +31,7 @@ AMaze::~AMaze()
 	Nodes.clear();
 }
 
-MazeNode* AMaze::GetNodeAtPosition(FMazeCoordinates Coordinates) const
+FMazeNode* AMaze::GetNodeAtPosition(FMazeCoordinates Coordinates) const
 {
 	return this->Nodes[Coordinates.Y][Coordinates.X];
 }
@@ -72,10 +72,7 @@ TSubclassOf<AActor> AMaze::GetActorForExits(FNodeExits Exits) const
 		if((N & S) || (E & W)){
 			return StraightExitBP;
 		}
-		else
-		{
-			return CornerExitBP;
-		}
+		return CornerExitBP;
 	case 3:
 		return OneExitBP;
 	case 4:
@@ -143,10 +140,10 @@ void AMaze::InitialiseNodes()
 	// Initialise our nodes 2D vector
 	for(float i = 0.0f; i < this->Width; i++)
 	{
-		std::vector<MazeNode*> Row;
+		std::vector<FMazeNode*> Row;
 		for(float j = 0.0f; j < this->Depth; j++)
 		{
-			Row.push_back(new MazeNode(this, FMazeCoordinates{j, i}, FNodeExits{}));
+			Row.push_back(new FMazeNode(this, FMazeCoordinates{j, i}, FNodeExits{}));
 		}
 		Nodes.push_back(Row);
 	}
@@ -159,9 +156,9 @@ void AMaze::ConfigureMaze(FMazeGenerator* Generator)
 
 void AMaze::SpawnMazeGridBPs() const
 {
-	for (std::vector<MazeNode*> Row : Nodes)
+	for (std::vector<FMazeNode*> Row : Nodes)
 	{
-		for(const MazeNode* Node : Row)
+		for(const FMazeNode* Node : Row)
 		{
 			GetWorld()->SpawnActor<AActor>(
 				this->GetActorForExits(Node->Exits),

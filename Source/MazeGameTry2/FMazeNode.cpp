@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "MazeNode.h"
+#include "FMazeNode.h"
 #include "Maze.h"
 
-MazeNode::MazeNode(const AMaze* Maze, FMazeCoordinates Coordinates, const FNodeExits Exits)
+FMazeNode::FMazeNode(const AMaze* Maze, FMazeCoordinates Coordinates, FNodeExits Exits)
 {
 	this->Maze = Maze;
 	this->Coordinates = Coordinates;
