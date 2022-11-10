@@ -119,4 +119,5 @@ void SimplePrimMaze::GenerateMaze(AMaze* Maze)
 	}
 	
 	Maze->Start = Start;
+	Maze->End = Maze->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Maze->Depth-1), static_cast<float>(Maze->Width-1)});
 }
