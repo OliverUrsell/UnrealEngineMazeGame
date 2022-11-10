@@ -117,7 +117,10 @@ void SimplePrimMaze::GenerateMaze(AMaze* Maze)
 		// Remove the Wall at the selected index from Walls
 		Walls.erase(Walls.begin() + SelectedIndex);
 	}
-	
+
+	// Set the start to the bottom left
 	Maze->Start = Start;
+
+	// Set the end to the top right
 	Maze->End = Maze->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Maze->Depth-1), static_cast<float>(Maze->Width-1)});
 }

@@ -9,6 +9,7 @@
 #include "FNodeExits.h"
 #include "FMazeGenerator.h"
 #include "SimplePrimMaze.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AMaze::AMaze()
@@ -152,6 +153,21 @@ void AMaze::InitialiseNodes()
 void AMaze::ConfigureMaze(FMazeGenerator* Generator)
 {
 	Generator->GenerateMaze(this);
+
+	// Move the player to the start of the maze
+	const FMazeCoordinates StartCoordinates = FMazeCoordinates{
+		Start->Coordinates.X,
+		Start->Coordinates.Y,
+	};
+
+	FVector MazePosition = MazeCoordinatesToWorldLocation(StartCoordinates);
+
+	MazePosition += FVector{0, 0, 300};
+
+	TArray<AActor*> FoundActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), VRPawn, FoundActors);
+	
+	FoundActors[0]->SetActorLocation(MazePosition);
 }
 
 void AMaze::SpawnMazeGridBPs() const
