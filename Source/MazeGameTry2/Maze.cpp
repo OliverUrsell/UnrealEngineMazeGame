@@ -209,31 +209,6 @@ void AMaze::BeginPlay()
 	this->SpawnMazeGridBPs();
 }
 
-// void AMaze::OnConstruction(const FTransform &Transform)
-// {
-// 	// There is a useful refactoring we'll cover in next part. We dont need all this repetition...
-// 	while (this->GetComponentByClass(UInstancedStaticMeshComponent::StaticClass()) != nullptr)
-// 	{
-// 		UActorComponent *cls = this->GetComponentByClass(UInstancedStaticMeshComponent::StaticClass());
-// 		cls->UnregisterComponent();
-// 		cls->DestroyComponent();
-// 		cls->SetActive(false);
-// 	}
-//
-// 	ISMC = NewObject<UInstancedStaticMeshComponent>(this);
-// 	ISMC->RegisterComponent();
-// 	ISMC->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
-// 	ISMC->SetStaticMesh(OneExitBP);
-//
-// 	// The promised loop. You can attach a variable and play around in the inspector.
-// 	for (int i = 0; i < 10; i++)
-// 	{
-// 		ISMC->AddInstance(FTransform(FVector(100.0f * i, 0, 0)));
-// 	}
-// 	// ISM->AddInstance(FTransform());
-// 	UE_LOG(LogTemp, Warning, TEXT("You have just changed something from inspector."));
-// }
-
 // Called every frame
 void AMaze::Tick(float DeltaTime)
 {
