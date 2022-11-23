@@ -27,10 +27,13 @@ public:
 	FMazeNode* GetNodeAtPosition(FMazeCoordinates Coordinates) const;
 	
 	UPROPERTY(EditAnywhere)
-	int Width = 3;
+	int Width = 10;
 	
 	UPROPERTY(EditAnywhere)
-	int Depth = 5;
+	int Depth = 10;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<AActor> VRPawn;
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AActor> ClosedWallsBP;
@@ -58,8 +61,9 @@ private:
 	void InitialiseNodes();
 	void ConfigureMaze(FMazeGenerator* Generator);
 	void SpawnMazeGridBPs() const;
-	const int PrefabBlueprintWidth = 1000;
-	const int PrefabBlueprintDepth = 1000;
+	const float BlueprintScale = 0.3f; // The size of each individual cell in the maze
+	const int PrefabBlueprintDepth = 2000 * BlueprintScale;
+	const int PrefabBlueprintWidth = 2000 * BlueprintScale;
 
 public:
 	// Called every frame

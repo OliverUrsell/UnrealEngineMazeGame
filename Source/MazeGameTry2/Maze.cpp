@@ -15,7 +15,7 @@
 AMaze::AMaze()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 }
 
 AMaze::~AMaze()
@@ -52,6 +52,9 @@ FVector AMaze::MazeCoordinatesToWorldLocation(FMazeCoordinates Coordinates) cons
 
 TSubclassOf<AActor> AMaze::GetActorForExits(FNodeExits Exits) const
 {
+
+	// return ThreeExitBP;
+	
 	const bool N = Exits.bNorth;
 	const bool E = Exits.bEast;
 	const bool S = Exits.bSouth;
@@ -78,9 +81,11 @@ TSubclassOf<AActor> AMaze::GetActorForExits(FNodeExits Exits) const
 		return OneExitBP;
 	case 4:
 		return ClosedWallsBP;
-	default:
-		throw std::runtime_error("There shouldn't be less than 0 or more than 4 walls");
+	// default:
+	// 	throw std::runtime_error("There shouldn't be less than 0 or more than 4 walls");
 	}
+
+	return ClosedWallsBP;
 }
 
 FRotator AMaze::GetRotationForExits(FNodeExits Exits)
@@ -96,7 +101,7 @@ FRotator AMaze::GetRotationForExits(FNodeExits Exits)
 		(N & E & !S & W) || // South Exit Only
 		(!N & E & !S & W) || // North and South Exit
 		(N & E & !S & !W) || // South and West Exit
-		(!N & !E & !S & W) // West Wall Only
+		(!N & E & !S & !W) // East Wall Only
 		)
 	{
 		return FRotator(0.0,0.0,0.0);
@@ -106,7 +111,7 @@ FRotator AMaze::GetRotationForExits(FNodeExits Exits)
 		(N & E & S & !W) || // West Exit Only
 		(N & !E & S & !W) || // East and West Exit
 		(!N & E & S & !W) || // North and West Exit
-		(N & !E & !S & !W) // North Wall Only
+		(!N & !E & S & !W) // South Wall Only
 		)
 	{
 		
@@ -116,7 +121,7 @@ FRotator AMaze::GetRotationForExits(FNodeExits Exits)
 	if(
 		(!N & E & S & W) || // North Exit Only
 		(!N & !E & S & W) || // North and East Exit
-		(!N & E & !S & !W) // East Wall Only
+		(!N & !E & !S & W) // West Wall Only
 		)
 	{
 		return FRotator(0.0,180.0,0.0);
@@ -125,15 +130,17 @@ FRotator AMaze::GetRotationForExits(FNodeExits Exits)
 	if(
 		(N & !E & S & W) || // East Exit Only
 		(N & !E & !S & W) || // East and South Exit
-		(!N & !E & S & !W) // South Wall Only
+		(N & !E & !S & !W) // North Wall Only
 		)
 	{
 		return FRotator(0.0,270.0,0.0);
 	}
 
-	char Error [80];
-	sprintf(Error, "No rotation was returned for a set of exit booleans N, S, E, W: %d %d %d %d", N, S, E, W);
-	throw std::runtime_error(Error);
+	// char Error [80];
+	// sprintf(Error, "No rotation was returned for a set of exit booleans N, S, E, W: %d %d %d %d", N, S, E, W);
+	// throw std::runtime_error(Error);
+
+	return FRotator();
 }
 
 void AMaze::InitialiseNodes()
@@ -159,11 +166,13 @@ void AMaze::ConfigureMaze(FMazeGenerator* Generator)
 		Start->Coordinates.X,
 		Start->Coordinates.Y,
 	};
-
+	
 	FVector MazePosition = MazeCoordinatesToWorldLocation(StartCoordinates);
+	
+	MazePosition += FVector{0, 0, 2000};
 
-	MazePosition += FVector{0, 0, 300};
-
+	// const FVector MazePosition = FVector{0,0,30};
+	
 	TArray<AActor*> FoundActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), VRPawn, FoundActors);
 	
@@ -176,11 +185,13 @@ void AMaze::SpawnMazeGridBPs() const
 	{
 		for(const FMazeNode* Node : Row)
 		{
-			GetWorld()->SpawnActor<AActor>(
+			AActor* actor = GetWorld()->SpawnActor<AActor>(
 				this->GetActorForExits(Node->Exits),
 				this->MazeCoordinatesToWorldLocation(Node->Coordinates),
 				this->GetRotationForExits(Node->Exits)
 			);
+
+			actor->SetActorRelativeScale3D(FVector(BlueprintScale));
 		}
 	}
 }
@@ -191,12 +202,37 @@ void AMaze::BeginPlay()
 	Super::BeginPlay();
 
 	this->InitialiseNodes();
-
+	
 	SimplePrimMaze g = SimplePrimMaze();
 	this->ConfigureMaze(&g);
 	
 	this->SpawnMazeGridBPs();
 }
+
+// void AMaze::OnConstruction(const FTransform &Transform)
+// {
+// 	// There is a useful refactoring we'll cover in next part. We dont need all this repetition...
+// 	while (this->GetComponentByClass(UInstancedStaticMeshComponent::StaticClass()) != nullptr)
+// 	{
+// 		UActorComponent *cls = this->GetComponentByClass(UInstancedStaticMeshComponent::StaticClass());
+// 		cls->UnregisterComponent();
+// 		cls->DestroyComponent();
+// 		cls->SetActive(false);
+// 	}
+//
+// 	ISMC = NewObject<UInstancedStaticMeshComponent>(this);
+// 	ISMC->RegisterComponent();
+// 	ISMC->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+// 	ISMC->SetStaticMesh(OneExitBP);
+//
+// 	// The promised loop. You can attach a variable and play around in the inspector.
+// 	for (int i = 0; i < 10; i++)
+// 	{
+// 		ISMC->AddInstance(FTransform(FVector(100.0f * i, 0, 0)));
+// 	}
+// 	// ISM->AddInstance(FTransform());
+// 	UE_LOG(LogTemp, Warning, TEXT("You have just changed something from inspector."));
+// }
 
 // Called every frame
 void AMaze::Tick(float DeltaTime)

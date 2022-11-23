@@ -87,11 +87,14 @@ void SimplePrimMaze::GenerateMaze(AMaze* Maze)
 					Node2->Exits.bEast = false;
 					break;
 				default:
-					throw std::runtime_error("Wall was defined with a gap of more than 1, or with the same node");
+					// Cannot raise an exception here as compiling for VR disables exceptions
+					GEngine->AddOnScreenDebugMessage(-1, 5.0, FColor::White, TEXT("Wall was defined with a gap of more than 1"));
 				}
 				break;
 			default:
-				throw std::runtime_error("Wall was defined with a gap of more than 1");
+				// Cannot raise an exception here as compiling for VR disables exceptions
+				GEngine->AddOnScreenDebugMessage(-1, 5.0, FColor::White, TEXT("Wall was defined with a gap of more than 1"));
+				break;
 			}
 
 			std::vector<FMazeNode_Wall> NewWalls;
