@@ -8,7 +8,9 @@
 #include "FMazeNode.h"
 #include "FNodeExits.h"
 #include "FMazeGenerator.h"
+#include "JsonObjectConverter.h"
 #include "SimplePrimMaze.h"
+#include "GenericPlatform/GenericPlatformCrashContext.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -37,7 +39,7 @@ FMazeNode* AMaze::GetNodeAtPosition(FMazeCoordinates Coordinates) const
 	return this->Nodes[Coordinates.Y][Coordinates.X];
 }
 
-FVector AMaze::MazeCoordinatesToWorldLocation(FMazeCoordinates Coordinates) const
+FVector AMaze::MazeCoordinatesToWorldLocation(const FMazeCoordinates Coordinates) const
 {
 	const FVector MazeRootLocation = this->GetActorLocation();
 	
@@ -48,6 +50,17 @@ FVector AMaze::MazeCoordinatesToWorldLocation(FMazeCoordinates Coordinates) cons
 	};
 	
 	return MazeRootLocation + PositionOffset;
+}
+
+FMazeCoordinates AMaze::WorldLocationToMazeCoordinates(const FVector Location) const
+{
+	const FVector MazeRootLocation = this->GetActorLocation();
+	const FVector PositionOffset = Location - MazeRootLocation;
+
+	return FMazeCoordinates{
+		PositionOffset.X / this->PrefabBlueprintWidth,
+		PositionOffset.Y / this->PrefabBlueprintDepth,
+	};
 }
 
 TSubclassOf<AActor> AMaze::GetActorForExits(FNodeExits Exits) const
@@ -143,6 +156,45 @@ FRotator AMaze::GetRotationForExits(FNodeExits Exits)
 	return FRotator();
 }
 
+FString AMaze::ToJSONString() const
+{
+	const TSharedRef<FJsonObject> JsonRootObject = this->ToJSON();
+	
+	FString OutputString;
+	const TSharedRef< TJsonWriter<> > Writer = TJsonWriterFactory<>::Create(&OutputString);
+	FJsonSerializer::Serialize(JsonRootObject, Writer);
+
+	return OutputString;
+}
+
+TSharedRef<FJsonObject> AMaze::ToJSON() const
+{
+	//TODO: We should memoise the maze node JSON since we don't need to recalculate it each time
+	//TODO: Reset the memoised maze node JSON when the maze changes
+	//TODO: Maybe store the memoised JSON in the ConfigureMaze function, since this is when it is changed
+	TArray<TSharedPtr<FJsonValue>> Items;
+
+	const TSharedRef<FJsonObject> JsonRootObject = MakeShareable(new FJsonObject);
+
+	for(std::vector<FMazeNode*> Row: this->Nodes)
+	{
+		for(const FMazeNode* Node: Row)
+		{
+			Items.Add(MakeShareable(new FJsonValueObject(Node->ToJSON())));
+		}
+	}
+
+	JsonRootObject->SetArrayField("nodes", Items);
+
+	TArray<AActor*> FoundActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), VRPawn, FoundActors);
+	const FMazeCoordinates PlayerPosition = this->WorldLocationToMazeCoordinates(FoundActors[0]->GetActorLocation());
+	JsonRootObject->SetNumberField("player_x", PlayerPosition.X);
+	JsonRootObject->SetNumberField("player_y", PlayerPosition.Y);
+
+	return JsonRootObject;
+}
+
 void AMaze::InitialiseNodes()
 {
 	// Initialise our nodes 2D vector
@@ -171,8 +223,6 @@ void AMaze::ConfigureMaze(FMazeGenerator* Generator)
 	
 	MazePosition += FVector{0, 0, 2000};
 
-	// const FVector MazePosition = FVector{0,0,30};
-	
 	TArray<AActor*> FoundActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), VRPawn, FoundActors);
 	

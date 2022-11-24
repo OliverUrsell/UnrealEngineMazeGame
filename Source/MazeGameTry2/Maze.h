@@ -71,6 +71,10 @@ public:
 
 	TSubclassOf<AActor> GetActorForExits(FNodeExits Exits) const;
 	FVector MazeCoordinatesToWorldLocation(FMazeCoordinates Coordinates) const;
+	FMazeCoordinates WorldLocationToMazeCoordinates(FVector Location) const;
 	static FRotator GetRotationForExits(FNodeExits Exits);
+
+	FString ToJSONString() const;
+	TSharedRef<FJsonObject> ToJSON() const;
 	
 };

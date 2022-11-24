@@ -20,4 +20,6 @@ public:
 	
 	FMazeCoordinates Coordinates;
 	const AMaze* Maze;
+
+	TSharedRef<FJsonObject> ToJSON() const;
 };

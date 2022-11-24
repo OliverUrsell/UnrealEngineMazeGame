@@ -9,3 +9,17 @@ FMazeNode::FMazeNode(const AMaze* Maze, FMazeCoordinates Coordinates, FNodeExits
 	this->Coordinates = Coordinates;
 	this->Exits = Exits;
 }
+
+TSharedRef<FJsonObject> FMazeNode::ToJSON() const
+{
+	const TSharedRef<FJsonObject> JsonRootObject = MakeShareable(new FJsonObject);
+	
+	JsonRootObject->SetNumberField("x", this->Coordinates.X);
+	JsonRootObject->SetNumberField("y", this->Coordinates.Y);
+	JsonRootObject->SetBoolField("north", this->Exits.bNorth);
+	JsonRootObject->SetBoolField("east", this->Exits.bEast);
+	JsonRootObject->SetBoolField("south", this->Exits.bSouth);
+	JsonRootObject->SetBoolField("west", this->Exits.bWest);
+
+	return JsonRootObject;
+}
