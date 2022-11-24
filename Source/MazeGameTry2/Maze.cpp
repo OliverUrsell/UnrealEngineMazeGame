@@ -12,6 +12,7 @@
 #include "SimplePrimMaze.h"
 #include "GenericPlatform/GenericPlatformCrashContext.h"
 #include "Kismet/GameplayStatics.h"
+#include "ServerSocketClient.h"
 
 // Sets default values
 AMaze::AMaze()
@@ -255,6 +256,11 @@ void AMaze::SpawnMazeGridBPs() const
 void AMaze::BeginPlay()
 {
 	Super::BeginPlay();
+
+	ServerSocketClient SC = ServerSocketClient();
+	SC.SendMessage(FString("Hello from client\n"));
+	GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  SC.ReadMessage());
+	SC.CloseSocket();
 
 	this->InitialiseNodes();
 	
