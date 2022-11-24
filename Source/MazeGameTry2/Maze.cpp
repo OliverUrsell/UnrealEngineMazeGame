@@ -94,8 +94,11 @@ TSubclassOf<AActor> AMaze::GetActorForExits(FNodeExits Exits) const
 		return OneExitBP;
 	case 4:
 		return ClosedWallsBP;
-	// default:
-	// 	throw std::runtime_error("There shouldn't be less than 0 or more than 4 walls");
+	default:
+		// Can't throw an exception here because Unreal Engine does not
+		// support building them to Android applications
+		GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
+			TEXT("There shouldn't be less than 0 or more than 4 walls")));
 	}
 
 	return ClosedWallsBP;
@@ -149,9 +152,11 @@ FRotator AMaze::GetRotationForExits(FNodeExits Exits)
 		return FRotator(0.0,270.0,0.0);
 	}
 
-	// char Error [80];
-	// sprintf(Error, "No rotation was returned for a set of exit booleans N, S, E, W: %d %d %d %d", N, S, E, W);
-	// throw std::runtime_error(Error);
+	// Can't throw an exception here because Unreal Engine does not
+	// support building them to Android applications
+	char Error [80];
+	sprintf(Error, "No rotation was returned for a set of exit booleans N, S, E, W: %d %d %d %d", N, S, E, W);
+	GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(Error));
 
 	return FRotator();
 }
