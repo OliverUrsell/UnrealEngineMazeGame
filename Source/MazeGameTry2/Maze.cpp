@@ -167,7 +167,7 @@ FString AMaze::ToJSONString() const
 	const TSharedRef<FJsonObject> JsonRootObject = this->ToJSON();
 	
 	FString OutputString;
-	const TSharedRef< TJsonWriter<> > Writer = TJsonWriterFactory<>::Create(&OutputString);
+	const TSharedRef<TJsonWriter<TCHAR, TCondensedJsonPrintPolicy<TCHAR>>> Writer = TJsonWriterFactory<TCHAR, TCondensedJsonPrintPolicy<TCHAR>>::Create(&OutputString);
 	FJsonSerializer::Serialize(JsonRootObject, Writer);
 
 	return OutputString;
