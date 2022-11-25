@@ -257,17 +257,18 @@ void AMaze::BeginPlay()
 {
 	Super::BeginPlay();
 
-	ServerSocketClient SC = ServerSocketClient();
-	SC.SendMessage(FString("Hello from client\n"));
-	GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  SC.ReadMessage());
-	SC.CloseSocket();
-
 	this->InitialiseNodes();
 	
 	SimplePrimMaze g = SimplePrimMaze();
 	this->ConfigureMaze(&g);
 	
 	this->SpawnMazeGridBPs();
+
+	ServerSocketClient SC = ServerSocketClient();
+	
+	// Tell the server about this maze
+	SC.SendStartCommand("1234", this);
+	SC.SendMessage(FString("Hello from client\n"));
 }
 
 // Called every frame

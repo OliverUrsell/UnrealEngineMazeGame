@@ -10,6 +10,8 @@
 
 #include <arpa/inet.h>
 
+#include "Maze.h"
+
 #define PORT "25566" // the port client will be connecting to 
 
 #define MAXDATASIZE 100 // max number of bytes we can get at once
@@ -68,6 +70,12 @@ ServerSocketClient::ServerSocketClient()
     freeaddrinfo(servinfo); // all done with this structure
 }
 
+void ServerSocketClient::SendStartCommand(const FString Code, const AMaze* Maze) const
+{
+    // Tell the server about this maze
+    this->SendMessage(FString("StartGame ") + Code + FString(" ") + Maze->ToJSONString());    
+}
+
 void ServerSocketClient::CloseSocket() const
 {
     close(this->Sockfd);
@@ -75,7 +83,9 @@ void ServerSocketClient::CloseSocket() const
 
 void ServerSocketClient::SendMessage(const FString Message) const
 {
-    send(this->Sockfd, TCHAR_TO_ANSI(*Message), Message.Len(), 0);
+    // Add a new line as a message delimiter 
+    const FString MessageToSend = Message + FString("\n");
+    send(this->Sockfd, TCHAR_TO_ANSI(*MessageToSend), MessageToSend.Len(), 0);
 }
 
 FString ServerSocketClient::ReadMessage() const
