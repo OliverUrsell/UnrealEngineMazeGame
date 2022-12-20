@@ -191,7 +191,16 @@ TSharedRef<FJsonObject> AMaze::ToJSON() const
 	}
 
 	JsonRootObject->SetArrayField("nodes", Items);
+	JsonRootObject->SetNumberField("width", this->Width);
+	JsonRootObject->SetNumberField("depth", this->Depth);
 
+	return JsonRootObject;
+}
+
+TSharedRef<FJsonObject> AMaze::PlayerPositionJSON() const
+{
+	const TSharedRef<FJsonObject> JsonRootObject = MakeShareable(new FJsonObject);
+	
 	TArray<AActor*> FoundActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), VRPawn, FoundActors);
 	const FMazeCoordinates PlayerPosition = this->WorldLocationToMazeCoordinates(FoundActors[0]->GetActorLocation());

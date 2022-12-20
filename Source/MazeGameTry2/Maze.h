@@ -76,5 +76,5 @@ public:
 
 	FString ToJSONString() const;
 	TSharedRef<FJsonObject> ToJSON() const;
-	
+	TSharedRef<FJsonObject> PlayerPositionJSON() const;
 };
