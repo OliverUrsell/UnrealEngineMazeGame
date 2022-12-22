@@ -14,6 +14,7 @@ public:
 	static void* Get_In_Addr(sockaddr* Sa);
 	ServerSocketClient();
 	void SendStartCommand(const FString Code, const AMaze* Maze) const;
+	void SendPlayerPosition(const AMaze* Maze) const;
 	void CloseSocket() const;
 	void SendMessage(const FString Message) const;
 	FString ReadMessage() const;

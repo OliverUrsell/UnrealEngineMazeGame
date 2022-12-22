@@ -7,6 +7,7 @@
 #include <vector>
 
 #include "FMazeGenerator.h"
+#include "ServerSocketClient.h"
 #include "GameFramework/Actor.h"
 #include "Maze.generated.h"
 
@@ -64,6 +65,7 @@ private:
 	const float BlueprintScale = 0.3f; // The size of each individual cell in the maze
 	const int PrefabBlueprintDepth = 2000 * BlueprintScale;
 	const int PrefabBlueprintWidth = 2000 * BlueprintScale;
+	ServerSocketClient* SC;
 
 public:
 	// Called every frame
@@ -75,6 +77,7 @@ public:
 	static FRotator GetRotationForExits(FNodeExits Exits);
 
 	FString ToJSONString() const;
+	FString GetPlayerPositionString() const;
 	TSharedRef<FJsonObject> ToJSON() const;
 	TSharedRef<FJsonObject> PlayerPositionJSON() const;
 };

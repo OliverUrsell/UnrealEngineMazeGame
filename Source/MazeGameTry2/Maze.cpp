@@ -18,7 +18,7 @@
 AMaze::AMaze()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = false;
+	PrimaryActorTick.bCanEverTick = true;
 }
 
 AMaze::~AMaze()
@@ -197,6 +197,17 @@ TSharedRef<FJsonObject> AMaze::ToJSON() const
 	return JsonRootObject;
 }
 
+FString AMaze::GetPlayerPositionString() const
+{
+	const TSharedRef<FJsonObject> JsonRootObject = this->PlayerPositionJSON();
+	
+	FString OutputString;
+	const TSharedRef<TJsonWriter<TCHAR, TCondensedJsonPrintPolicy<TCHAR>>> Writer = TJsonWriterFactory<TCHAR, TCondensedJsonPrintPolicy<TCHAR>>::Create(&OutputString);
+	FJsonSerializer::Serialize(JsonRootObject, Writer);
+
+	return OutputString;
+}
+
 TSharedRef<FJsonObject> AMaze::PlayerPositionJSON() const
 {
 	const TSharedRef<FJsonObject> JsonRootObject = MakeShareable(new FJsonObject);
@@ -272,16 +283,17 @@ void AMaze::BeginPlay()
 	this->ConfigureMaze(&g);
 	
 	this->SpawnMazeGridBPs();
-
-	ServerSocketClient SC = ServerSocketClient();
+	
+	SC = new ServerSocketClient();
 	
 	// Tell the server about this maze
-	SC.SendStartCommand("1234", this);
-	SC.SendMessage(FString("Hello from client\n"));
+	SC->SendStartCommand("1234", this);
+	SC->SendMessage(FString("Hello from client"));
 }
 
 // Called every frame
 void AMaze::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	SC->SendPlayerPosition(this);
 }

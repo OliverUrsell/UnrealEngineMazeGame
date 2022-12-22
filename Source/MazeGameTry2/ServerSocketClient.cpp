@@ -76,6 +76,12 @@ void ServerSocketClient::SendStartCommand(const FString Code, const AMaze* Maze)
     this->SendMessage(FString("StartGame ") + Code + FString(" ") + Maze->ToJSONString());    
 }
 
+void ServerSocketClient::SendPlayerPosition(const AMaze* Maze) const
+{
+    this->SendMessage(FString("PlayerPosition ") + Maze->GetPlayerPositionString());
+}
+
+
 void ServerSocketClient::CloseSocket() const
 {
     close(this->Sockfd);
@@ -84,7 +90,8 @@ void ServerSocketClient::CloseSocket() const
 void ServerSocketClient::SendMessage(const FString Message) const
 {
     // Add a new line as a message delimiter 
-    const FString MessageToSend = Message + FString("\n");
+    FString MessageToSend = Message + FString("\n");
+    UE_LOG(LogTemp, Log, TEXT("Sending Message... %s"), *Message);
     send(this->Sockfd, TCHAR_TO_ANSI(*MessageToSend), MessageToSend.Len(), 0);
 }
 
