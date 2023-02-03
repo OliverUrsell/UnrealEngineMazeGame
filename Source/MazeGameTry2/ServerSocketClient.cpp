@@ -76,9 +76,9 @@ void ServerSocketClient::SendStartCommand(const FString Code, const AMaze* Maze)
     this->SendMessage(FString("StartGame ") + Code + FString(" ") + Maze->ToJSONString());    
 }
 
-void ServerSocketClient::SendPlayerPosition(const AMaze* Maze) const
+void ServerSocketClient::SendPositions(const AMaze* Maze) const
 {
-    this->SendMessage(FString("PlayerPosition ") + Maze->GetPlayerPositionString());
+    this->SendMessage(FString("Positions ") + Maze->GetPositionsString());
 }
 
 void ServerSocketClient::CloseSocket() const

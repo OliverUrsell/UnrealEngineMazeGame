@@ -247,13 +247,15 @@ TSharedRef<FJsonObject> AMaze::ToJSON() const
 	JsonRootObject->SetArrayField("nodes", Items);
 	JsonRootObject->SetNumberField("width", this->Width);
 	JsonRootObject->SetNumberField("depth", this->Depth);
+	JsonRootObject->SetNumberField("goal_x", this->End->Coordinates.X);
+	JsonRootObject->SetNumberField("goal_y", this->End->Coordinates.Y);
 
 	return JsonRootObject;
 }
 
-FString AMaze::GetPlayerPositionString() const
+FString AMaze::GetPositionsString() const
 {
-	const TSharedRef<FJsonObject> JsonRootObject = this->PlayerPositionJSON();
+	const TSharedRef<FJsonObject> JsonRootObject = this->PositionsJSON();
 	
 	FString OutputString;
 	const TSharedRef<TJsonWriter<TCHAR, TCondensedJsonPrintPolicy<TCHAR>>> Writer = TJsonWriterFactory<TCHAR, TCondensedJsonPrintPolicy<TCHAR>>::Create(&OutputString);
@@ -262,7 +264,7 @@ FString AMaze::GetPlayerPositionString() const
 	return OutputString;
 }
 
-TSharedRef<FJsonObject> AMaze::PlayerPositionJSON() const
+TSharedRef<FJsonObject> AMaze::PositionsJSON() const
 {
 	const TSharedRef<FJsonObject> JsonRootObject = MakeShareable(new FJsonObject);
 	
@@ -353,5 +355,5 @@ void AMaze::BeginPlay()
 void AMaze::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	SC->SendPlayerPosition(this);
+	SC->SendPositions(this);
 }

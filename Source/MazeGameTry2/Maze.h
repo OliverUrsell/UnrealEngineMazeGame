@@ -80,7 +80,7 @@ public:
 	static FRotator GetRotationForExits(FNodeExits Exits);
 
 	FString ToJSONString() const;
-	FString GetPlayerPositionString() const;
+	FString GetPositionsString() const;
 	TSharedRef<FJsonObject> ToJSON() const;
-	TSharedRef<FJsonObject> PlayerPositionJSON() const;
+	TSharedRef<FJsonObject> PositionsJSON() const;
 };
