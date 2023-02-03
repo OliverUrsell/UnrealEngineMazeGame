@@ -179,32 +179,24 @@ std::pair<FMazeCoordinates, FRotator> getPositionAndRotationForGoal(FMazeNode* n
 		switch(random_number)
 		{
 		case 0:
-			GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
-				TEXT("North")));
 			if(exits.bNorth) return {
 				FMazeCoordinates{node->Coordinates.X + 0.4f, node->Coordinates.Y},
 				FRotator(0.0,0.0,0.0),
 			};
 			break;
 		case 1:
-			GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
-				TEXT("East")));
 			if(exits.bEast) return {
 				FMazeCoordinates{node->Coordinates.X, node->Coordinates.Y + 0.4f},
 				FRotator(0.0,90.0,0.0),
 			};
 			break;
 		case 2:
-			GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
-				TEXT("South")));
 			if(exits.bSouth) return {
 				FMazeCoordinates{node->Coordinates.X - 0.4f, node->Coordinates.Y},
 				FRotator(0.0,180.0,0.0),
 			};
 			break;
 		case 3:
-			GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
-				TEXT("West")));
 			if(exits.bWest) return {
 				FMazeCoordinates{node->Coordinates.X, node->Coordinates.Y - 0.4f},
 				FRotator(0.0,270.0,0.0),
