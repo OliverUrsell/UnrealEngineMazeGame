@@ -54,6 +54,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AActor> ThreeExitBP;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> GoalBP;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

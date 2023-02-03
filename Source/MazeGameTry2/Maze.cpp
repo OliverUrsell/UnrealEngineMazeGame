@@ -5,6 +5,7 @@
 
 #include <string>
 #include <vector>
+#include <cassert>
 #include "FMazeNode.h"
 #include "FNodeExits.h"
 #include "FMazeGenerator.h"
@@ -162,6 +163,67 @@ FRotator AMaze::GetRotationForExits(FNodeExits Exits)
 	return FRotator();
 }
 
+std::pair<FMazeCoordinates, FRotator> getPositionAndRotationForGoal(FMazeNode* node)
+{
+	FNodeExits exits = node->Exits;
+	assert((void("At least one of the exits must be true"), exits.bNorth||exits.bEast||exits.bSouth||exits.bWest));
+
+	/* initialize random seed: */
+	std::srand (std::time(NULL));
+	
+	// node.Coordinates.X += 1;
+	int random_number;
+	while (true)
+	{
+		random_number = std::rand() % 4;
+		switch(random_number)
+		{
+		case 0:
+			GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
+				TEXT("North")));
+			if(exits.bNorth) return {
+				FMazeCoordinates{node->Coordinates.X + 0.4f, node->Coordinates.Y},
+				FRotator(0.0,0.0,0.0),
+			};
+			break;
+		case 1:
+			GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
+				TEXT("East")));
+			if(exits.bEast) return {
+				FMazeCoordinates{node->Coordinates.X, node->Coordinates.Y + 0.4f},
+				FRotator(0.0,90.0,0.0),
+			};
+			break;
+		case 2:
+			GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
+				TEXT("South")));
+			if(exits.bSouth) return {
+				FMazeCoordinates{node->Coordinates.X - 0.4f, node->Coordinates.Y},
+				FRotator(0.0,180.0,0.0),
+			};
+			break;
+		case 3:
+			GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
+				TEXT("West")));
+			if(exits.bWest) return {
+				FMazeCoordinates{node->Coordinates.X, node->Coordinates.Y - 0.4f},
+				FRotator(0.0,270.0,0.0),
+			};
+			break;
+			
+		default:
+			// Can't throw an exception here because Unreal Engine does not
+			// support building them to Android applications
+			GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
+				TEXT("Random number generated < 0  or > 3 for goal position")));
+			return {
+				FMazeCoordinates{node->Coordinates.X, node->Coordinates.Y},
+				FRotator(0.0,0.0,0.0),
+			};
+		}
+	}
+}
+
 FString AMaze::ToJSONString() const
 {
 	const TSharedRef<FJsonObject> JsonRootObject = this->ToJSON();
@@ -175,9 +237,9 @@ FString AMaze::ToJSONString() const
 
 TSharedRef<FJsonObject> AMaze::ToJSON() const
 {
-	//TODO: We should memoise the maze node JSON since we don't need to recalculate it each time
-	//TODO: Reset the memoised maze node JSON when the maze changes
-	//TODO: Maybe store the memoised JSON in the ConfigureMaze function, since this is when it is changed
+	//TODO: We should memoize the maze node JSON since we don't need to recalculate it each time
+	//TODO: Reset the memoized maze node JSON when the maze changes
+	//TODO: Maybe store the memoized JSON in the ConfigureMaze function, since this is when it is changed
 	TArray<TSharedPtr<FJsonValue>> Items;
 
 	const TSharedRef<FJsonObject> JsonRootObject = MakeShareable(new FJsonObject);
@@ -240,19 +302,23 @@ void AMaze::ConfigureMaze(FMazeGenerator* Generator)
 	Generator->GenerateMaze(this);
 
 	// Move the player to the start of the maze
-	const FMazeCoordinates StartCoordinates = FMazeCoordinates{
-		Start->Coordinates.X,
-		Start->Coordinates.Y,
-	};
+	FVector MazeStartPosition = MazeCoordinatesToWorldLocation(Start->Coordinates);
 	
-	FVector MazePosition = MazeCoordinatesToWorldLocation(StartCoordinates);
-	
-	MazePosition += FVector{0, 0, 2000};
+	MazeStartPosition += FVector{0, 0, 500};
 
 	TArray<AActor*> FoundActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), VRPawn, FoundActors);
 	
-	FoundActors[0]->SetActorLocation(MazePosition);
+	FoundActors[0]->SetActorLocation(MazeStartPosition);
+	
+	std::pair<FMazeCoordinates,FRotator> GoalPair = getPositionAndRotationForGoal(End);
+
+	// Move the goal to the end of the maze
+	GetWorld()->SpawnActor<AActor>(
+		GoalBP,
+		MazeCoordinatesToWorldLocation(GoalPair.first),
+		GoalPair.second
+	);
 }
 
 void AMaze::SpawnMazeGridBPs() const

@@ -81,7 +81,6 @@ void ServerSocketClient::SendPlayerPosition(const AMaze* Maze) const
     this->SendMessage(FString("PlayerPosition ") + Maze->GetPlayerPositionString());
 }
 
-
 void ServerSocketClient::CloseSocket() const
 {
     close(this->Sockfd);
