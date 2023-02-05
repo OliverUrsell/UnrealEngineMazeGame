@@ -12,7 +12,7 @@
 #include "Maze.generated.h"
 
 UCLASS()
-class MAZEGAMETRY2_API AMaze : public AActor
+class MAZEGAMETRY2_API AMaze final : public AActor
 {
 	GENERATED_BODY()
 	
@@ -57,6 +57,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AActor> GoalBP;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> MonsterBP;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -68,6 +71,7 @@ private:
 	const float BlueprintScale = 0.3f; // The size of each individual cell in the maze
 	const int PrefabBlueprintDepth = 2000 * BlueprintScale;
 	const int PrefabBlueprintWidth = 2000 * BlueprintScale;
+	const float MonsterPositionHeight = 300;
 	ServerSocketClient* SC;
 
 public:
@@ -83,4 +87,6 @@ public:
 	FString GetPositionsString() const;
 	TSharedRef<FJsonObject> ToJSON() const;
 	TSharedRef<FJsonObject> PositionsJSON() const;
+	std::pair<FMazeCoordinates, FRotator> GetMonsterStartingPositionAndRotation() const;
+	std::pair<FMazeCoordinates, FRotator> GetPositionAndRotationForGoal() const;
 };

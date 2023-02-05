@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "EMazeDirection.h"
 #include "FMazeCoordinates.h"
 #include "FNodeExits.h"
 
@@ -17,6 +18,9 @@ public:
 	FNodeExits Exits;
 	
 	FMazeNode(const AMaze* Maze, FMazeCoordinates Coordinates, FNodeExits Exits);
+
+	EMaze_Direction GetRandomClosedWall() const;
+	EMaze_Direction GetRandomOpenWall() const;
 	
 	FMazeCoordinates Coordinates;
 	const AMaze* Maze;

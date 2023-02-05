@@ -5,7 +5,6 @@
 
 #include <string>
 #include <vector>
-#include <cassert>
 #include "FMazeNode.h"
 #include "FNodeExits.h"
 #include "FMazeGenerator.h"
@@ -38,6 +37,7 @@ AMaze::~AMaze()
 
 FMazeNode* AMaze::GetNodeAtPosition(FMazeCoordinates Coordinates) const
 {
+	//TODO: Add an assert here to check the coordinates are valid
 	return this->Nodes[Coordinates.Y][Coordinates.X];
 }
 
@@ -56,6 +56,7 @@ FVector AMaze::MazeCoordinatesToWorldLocation(const FMazeCoordinates Coordinates
 
 FMazeCoordinates AMaze::WorldLocationToMazeCoordinates(const FVector Location) const
 {
+	//TODO: Add an assert here to check the coordinates are valid
 	const FVector MazeRootLocation = this->GetActorLocation();
 	const FVector PositionOffset = Location - MazeRootLocation;
 
@@ -67,9 +68,6 @@ FMazeCoordinates AMaze::WorldLocationToMazeCoordinates(const FVector Location) c
 
 TSubclassOf<AActor> AMaze::GetActorForExits(FNodeExits Exits) const
 {
-
-	// return ThreeExitBP;
-	
 	const bool N = Exits.bNorth;
 	const bool E = Exits.bEast;
 	const bool S = Exits.bSouth;
@@ -106,7 +104,7 @@ TSubclassOf<AActor> AMaze::GetActorForExits(FNodeExits Exits) const
 	return ClosedWallsBP;
 }
 
-FRotator AMaze::GetRotationForExits(FNodeExits Exits)
+FRotator AMaze::GetRotationForExits(const FNodeExits Exits)
 {
 	const bool N = Exits.bNorth;
 	const bool E = Exits.bEast;
@@ -163,56 +161,83 @@ FRotator AMaze::GetRotationForExits(FNodeExits Exits)
 	return FRotator();
 }
 
-std::pair<FMazeCoordinates, FRotator> getPositionAndRotationForGoal(FMazeNode* node)
+std::pair<FMazeCoordinates, FRotator> AMaze::GetPositionAndRotationForGoal() const
 {
-	FNodeExits exits = node->Exits;
-	assert((void("At least one of the exits must be true"), exits.bNorth||exits.bEast||exits.bSouth||exits.bWest));
-
-	/* initialize random seed: */
-	std::srand (std::time(NULL));
-	
-	// node.Coordinates.X += 1;
-	int random_number;
-	while (true)
+	const EMaze_Direction Direction = End->GetRandomClosedWall();
+	switch(Direction)
 	{
-		random_number = std::rand() % 4;
-		switch(random_number)
-		{
-		case 0:
-			if(exits.bNorth) return {
-				FMazeCoordinates{node->Coordinates.X + 0.4f, node->Coordinates.Y},
-				FRotator(0.0,0.0,0.0),
-			};
-			break;
-		case 1:
-			if(exits.bEast) return {
-				FMazeCoordinates{node->Coordinates.X, node->Coordinates.Y + 0.4f},
-				FRotator(0.0,90.0,0.0),
-			};
-			break;
-		case 2:
-			if(exits.bSouth) return {
-				FMazeCoordinates{node->Coordinates.X - 0.4f, node->Coordinates.Y},
-				FRotator(0.0,180.0,0.0),
-			};
-			break;
-		case 3:
-			if(exits.bWest) return {
-				FMazeCoordinates{node->Coordinates.X, node->Coordinates.Y - 0.4f},
-				FRotator(0.0,270.0,0.0),
-			};
-			break;
-			
-		default:
-			// Can't throw an exception here because Unreal Engine does not
-			// support building them to Android applications
-			GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
-				TEXT("Random number generated < 0  or > 3 for goal position")));
-			return {
-				FMazeCoordinates{node->Coordinates.X, node->Coordinates.Y},
-				FRotator(0.0,0.0,0.0),
-			};
-		}
+	case North:
+		return {
+			FMazeCoordinates{End->Coordinates.X + 0.4f, End->Coordinates.Y},
+			FRotator(0.0,0.0,0.0),
+		};
+	case East:
+		return {
+			FMazeCoordinates{End->Coordinates.X, End->Coordinates.Y + 0.4f},
+			FRotator(0.0,90.0,0.0),
+		};
+	case South:
+		return {
+			FMazeCoordinates{End->Coordinates.X - 0.4f, End->Coordinates.Y},
+			FRotator(0.0,180.0,0.0),
+		};
+	case West:
+		return {
+			FMazeCoordinates{End->Coordinates.X, End->Coordinates.Y - 0.4f},
+			FRotator(0.0,270.0,0.0),
+		};
+	default:
+		// Can't throw an exception here because Unreal Engine does not
+		// support building them to Android applications
+		GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
+			TEXT("Got an invalid value of EMazeDirection")));
+		return {
+			FMazeCoordinates{End->Coordinates.X, End->Coordinates.Y},
+			FRotator(0.0,0.0,0.0),
+		};
+	}
+}
+
+std::pair<FMazeCoordinates, FRotator> AMaze::GetMonsterStartingPositionAndRotation() const
+{
+	/* initialize random seed: */
+	std::srand (time(nullptr));
+	const int Random_X = std::rand() % this->Depth;
+	const int Random_Y = std::rand() % this->Width;
+	const FMazeNode* Node = this->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Random_X), static_cast<float>(Random_Y)});
+	
+	const EMaze_Direction Direction = Node->GetRandomOpenWall();
+	switch(Direction)
+	{
+	case North:
+		return {
+			FMazeCoordinates{Node->Coordinates.X, Node->Coordinates.Y},
+			FRotator(0.0,270.0,0.0),
+		};
+	case East:
+		return {
+			FMazeCoordinates{Node->Coordinates.X, Node->Coordinates.Y},
+			FRotator(0.0,0.0,0.0),
+		};
+	case South:
+		return {
+			FMazeCoordinates{Node->Coordinates.X, Node->Coordinates.Y},
+			FRotator(0.0,90.0,0.0),
+		};
+	case West:
+		return {
+			FMazeCoordinates{Node->Coordinates.X, Node->Coordinates.Y},
+			FRotator(0.0,180.0,0.0),
+		};
+	default:
+		// Can't throw an exception here because Unreal Engine does not
+		// support building them to Android applications
+		GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
+			TEXT("Got an invalid value of EMazeDirection")));
+		return {
+			FMazeCoordinates{Node->Coordinates.X, Node->Coordinates.Y},
+			FRotator(0.0,0.0,0.0),
+		};
 	}
 }
 
@@ -304,14 +329,23 @@ void AMaze::ConfigureMaze(FMazeGenerator* Generator)
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), VRPawn, FoundActors);
 	
 	FoundActors[0]->SetActorLocation(MazeStartPosition);
-	
-	std::pair<FMazeCoordinates,FRotator> GoalPair = getPositionAndRotationForGoal(End);
 
-	// Move the goal to the end of the maze
+	// Spawn the goal at the end of the maze
+	const std::pair<FMazeCoordinates,FRotator> GoalPair = this->GetPositionAndRotationForGoal();
+	
 	GetWorld()->SpawnActor<AActor>(
 		GoalBP,
 		MazeCoordinatesToWorldLocation(GoalPair.first),
 		GoalPair.second
+	);
+
+	// Spawn the monster somewhere in the maze
+	const std::pair<FMazeCoordinates,FRotator> MonsterPair = GetMonsterStartingPositionAndRotation();
+	
+	GetWorld()->SpawnActor<AActor>(
+		MonsterBP,
+		MazeCoordinatesToWorldLocation(MonsterPair.first) + FVector{0, 0, this->MonsterPositionHeight},
+		MonsterPair.second
 	);
 }
 
@@ -321,13 +355,13 @@ void AMaze::SpawnMazeGridBPs() const
 	{
 		for(const FMazeNode* Node : Row)
 		{
-			AActor* actor = GetWorld()->SpawnActor<AActor>(
+			AActor* Actor = GetWorld()->SpawnActor<AActor>(
 				this->GetActorForExits(Node->Exits),
 				this->MazeCoordinatesToWorldLocation(Node->Coordinates),
 				this->GetRotationForExits(Node->Exits)
 			);
 
-			actor->SetActorRelativeScale3D(FVector(BlueprintScale));
+			Actor->SetActorRelativeScale3D(FVector(BlueprintScale));
 		}
 	}
 }
@@ -347,8 +381,7 @@ void AMaze::BeginPlay()
 	SC = new ServerSocketClient();
 	
 	// Tell the server about this maze
-	SC->SendStartCommand("1234", this);
-	SC->SendMessage(FString("Hello from client"));
+	SC->SendStartCommand("2007", this);
 }
 
 // Called every frame
