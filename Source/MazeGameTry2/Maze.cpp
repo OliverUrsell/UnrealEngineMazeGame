@@ -296,8 +296,15 @@ TSharedRef<FJsonObject> AMaze::PositionsJSON() const
 	TArray<AActor*> FoundActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), VRPawn, FoundActors);
 	const FMazeCoordinates PlayerPosition = this->WorldLocationToMazeCoordinates(FoundActors[0]->GetActorLocation());
+
 	JsonRootObject->SetNumberField("player_x", PlayerPosition.X);
 	JsonRootObject->SetNumberField("player_y", PlayerPosition.Y);
+	
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), MonsterBP, FoundActors);
+	const FMazeCoordinates MonsterPosition = this->WorldLocationToMazeCoordinates(FoundActors[0]->GetActorLocation());
+
+	JsonRootObject->SetNumberField("monster_x", MonsterPosition.X);
+	JsonRootObject->SetNumberField("monster_y", MonsterPosition.Y);
 
 	return JsonRootObject;
 }
