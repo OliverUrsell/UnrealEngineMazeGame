@@ -21,6 +21,9 @@ public:
 
 	EMaze_Direction GetRandomClosedWall() const;
 	EMaze_Direction GetRandomOpenWall() const;
+
+	bool GetWallStatus(EMaze_Direction Direction) const;
+	FMazeNode* GetNeighbour(EMaze_Direction Direction) const;
 	
 	FMazeCoordinates Coordinates;
 	const AMaze* Maze;

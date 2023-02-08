@@ -9,11 +9,13 @@
 #include "FNodeExits.h"
 #include "FMazeGenerator.h"
 #include "JsonObjectConverter.h"
+#include "Monster.h"
 #include "SimplePrimMaze.h"
 #include "GenericPlatform/GenericPlatformCrashContext.h"
 #include "Kismet/GameplayStatics.h"
 #include "ServerSocketClient.h"
 
+class AMonster;
 // Sets default values
 AMaze::AMaze()
 {
@@ -198,36 +200,37 @@ std::pair<FMazeCoordinates, FRotator> AMaze::GetPositionAndRotationForGoal() con
 	}
 }
 
-std::pair<FMazeCoordinates, FRotator> AMaze::GetMonsterStartingPositionAndRotation() const
+std::pair<FMazeNode*, std::pair<EMaze_Direction, FRotator>>
+AMaze::GetMonsterStartingPositionAndRotation() const
 {
 	/* initialize random seed: */
 	std::srand (time(nullptr));
 	const int Random_X = std::rand() % this->Depth;
 	const int Random_Y = std::rand() % this->Width;
-	const FMazeNode* Node = this->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Random_X), static_cast<float>(Random_Y)});
+	FMazeNode* Node = this->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Random_X), static_cast<float>(Random_Y)});
 	
 	const EMaze_Direction Direction = Node->GetRandomOpenWall();
 	switch(Direction)
 	{
 	case North:
 		return {
-			FMazeCoordinates{Node->Coordinates.X, Node->Coordinates.Y},
-			FRotator(0.0,270.0,0.0),
+			Node,
+			{Direction, FRotator(0.0,270.0,0.0)},
 		};
 	case East:
 		return {
-			FMazeCoordinates{Node->Coordinates.X, Node->Coordinates.Y},
-			FRotator(0.0,0.0,0.0),
+			Node,
+			{Direction, FRotator(0.0,0.0,0.0)},
 		};
 	case South:
 		return {
-			FMazeCoordinates{Node->Coordinates.X, Node->Coordinates.Y},
-			FRotator(0.0,90.0,0.0),
+			Node,
+			{Direction, FRotator(0.0,90.0,0.0)},
 		};
 	case West:
 		return {
-			FMazeCoordinates{Node->Coordinates.X, Node->Coordinates.Y},
-			FRotator(0.0,180.0,0.0),
+			Node,
+			{Direction, FRotator(0.0,180.0,0.0)},
 		};
 	default:
 		// Can't throw an exception here because Unreal Engine does not
@@ -235,8 +238,8 @@ std::pair<FMazeCoordinates, FRotator> AMaze::GetMonsterStartingPositionAndRotati
 		GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
 			TEXT("Got an invalid value of EMazeDirection")));
 		return {
-			FMazeCoordinates{Node->Coordinates.X, Node->Coordinates.Y},
-			FRotator(0.0,0.0,0.0),
+			Node,
+			{North, FRotator(0.0,0.0,0.0)},
 		};
 	}
 }
@@ -347,13 +350,17 @@ void AMaze::ConfigureMaze(FMazeGenerator* Generator)
 	);
 
 	// Spawn the monster somewhere in the maze
-	const std::pair<FMazeCoordinates,FRotator> MonsterPair = GetMonsterStartingPositionAndRotation();
+	const std::pair<FMazeNode*,std::pair<EMaze_Direction, FRotator>> MonsterPair = GetMonsterStartingPositionAndRotation();
 	
-	GetWorld()->SpawnActor<AActor>(
+	AActor* Monster = GetWorld()->SpawnActor<AActor>(
 		MonsterBP,
-		MazeCoordinatesToWorldLocation(MonsterPair.first) + FVector{0, 0, this->MonsterPositionHeight},
-		MonsterPair.second
+		MazeCoordinatesToWorldLocation(MonsterPair.first->Coordinates) + FVector{0, 0, this->MonsterPositionHeight},
+		MonsterPair.second.second
 	);
+
+	AMonster* SpawnedMonster = static_cast<AMonster*>(Monster);
+	SpawnedMonster->DirectionChanged(MonsterPair.second.first);
+	SpawnedMonster->GoalNode = MonsterPair.first;
 }
 
 void AMaze::SpawnMazeGridBPs() const

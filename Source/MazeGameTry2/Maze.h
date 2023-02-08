@@ -71,7 +71,6 @@ private:
 	const float BlueprintScale = 0.3f; // The size of each individual cell in the maze
 	const int PrefabBlueprintDepth = 2000 * BlueprintScale;
 	const int PrefabBlueprintWidth = 2000 * BlueprintScale;
-	const float MonsterPositionHeight = 300;
 	ServerSocketClient* SC;
 
 public:
@@ -87,6 +86,9 @@ public:
 	FString GetPositionsString() const;
 	TSharedRef<FJsonObject> ToJSON() const;
 	TSharedRef<FJsonObject> PositionsJSON() const;
-	std::pair<FMazeCoordinates, FRotator> GetMonsterStartingPositionAndRotation() const;
+	std::pair<FMazeNode*, std::pair<EMaze_Direction, FRotator>>
+	GetMonsterStartingPositionAndRotation() const;
 	std::pair<FMazeCoordinates, FRotator> GetPositionAndRotationForGoal() const;
+
+	const float MonsterPositionHeight = 300;
 };

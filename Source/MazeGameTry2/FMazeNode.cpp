@@ -96,3 +96,39 @@ EMaze_Direction FMazeNode::GetRandomOpenWall() const
 		}
 	}
 }
+
+bool FMazeNode::GetWallStatus(const EMaze_Direction Direction) const
+{
+	switch (Direction)
+	{
+	case North: return this->Exits.bNorth;
+	case East: return this->Exits.bEast;
+	case South: return this->Exits.bSouth;
+	case West: return this->Exits.bWest;
+	default:
+		// Can't throw an exception here because Unreal Engine does not
+		// support building them to Android applications
+		GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
+			TEXT("Got an unexpected value for the direction")));;
+		return false;
+	}
+}
+
+FMazeNode* FMazeNode::GetNeighbour(const EMaze_Direction Direction) const
+{
+	const float X_Position = this->Coordinates.X;
+	const float Y_Position = this->Coordinates.Y;
+	switch (Direction)
+	{
+	case North: return this->Maze->GetNodeAtPosition({X_Position + 1, Y_Position});
+	case East: return this->Maze->GetNodeAtPosition({X_Position, Y_Position + 1});
+	case South: return this->Maze->GetNodeAtPosition({X_Position - 1, Y_Position});
+	case West: return this->Maze->GetNodeAtPosition({X_Position, Y_Position - 1});
+	default:
+		// Can't throw an exception here because Unreal Engine does not
+		// support building them to Android applications
+		GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
+			TEXT("Got an unexpected value for the direction")));;
+		return nullptr;
+	}
+}
