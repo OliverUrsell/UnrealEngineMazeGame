@@ -30,10 +30,10 @@ ServerSocketClient::ServerSocketClient()
 {
     addrinfo hints, *servinfo, *p;
     int rv;
-    char s[INET6_ADDRSTRLEN];
+    char s[INET_ADDRSTRLEN];
 
     memset(&hints, 0, sizeof hints);
-    hints.ai_family = AF_UNSPEC;
+    hints.ai_family = AF_INET;
     hints.ai_socktype = SOCK_STREAM;
 
     if ((rv = getaddrinfo("127.0.0.1", PORT, &hints, &servinfo)) != 0) {
@@ -67,6 +67,12 @@ ServerSocketClient::ServerSocketClient()
             s, sizeof s);
     UE_LOG(LogTemp, Display, TEXT("Connected to server"));
 
+    // Put the socket in non-blocking mode
+    if(fcntl(Sockfd, F_SETFL, fcntl(Sockfd, F_GETFL) | O_NONBLOCK) < 0) {
+        UE_LOG(LogTemp, Error, TEXT("Failed to put socket in non-blocking mode"));
+        return;
+    }
+
     freeaddrinfo(servinfo); // all done with this structure
 }
 
@@ -90,20 +96,36 @@ void ServerSocketClient::SendMessage(const FString Message) const
 {
     // Add a new line as a message delimiter 
     FString MessageToSend = Message + FString("\n");
-    UE_LOG(LogTemp, Log, TEXT("Sending Message... %s"), *Message);
+    // UE_LOG(LogTemp, Log, TEXT("Sending Message... %s"), *Message);
+    //TODO: This might not send the whole message, see https://beej.us/guide/bgnet/html/#sendrecv about how send works
     send(this->Sockfd, TCHAR_TO_ANSI(*MessageToSend), MessageToSend.Len(), 0);
 }
 
 FString ServerSocketClient::ReadMessage() const
 {
-    int numbytes;
-    char buf[MAXDATASIZE];
+    ssize_t numbytes;
+    ANSICHAR buf[MAXDATASIZE];
     if ((numbytes = recv(Sockfd, buf, MAXDATASIZE-1, 0)) == -1) {
+        if(errno == EAGAIN || errno == EWOULDBLOCK)
+        {
+            // There was no data to read
+            return FString("");
+        }
         perror("recv");
         exit(1);
     }
     
+    // if(buf[numbytes-1] == '\n')
+    // {
+    //     buf[numbytes-1] = '\0';
+    // }else
+    // {
+    //     buf[numbytes] = '\0'; 
+    // }
+
     buf[numbytes] = '\0';
     
-    return FString(buf);
+    UE_LOG(LogTemp, Display, TEXT("Received string \"%s\" with length - %d"), buf, numbytes);
+    
+    return FString(buf).TrimStartAndEnd();
 }

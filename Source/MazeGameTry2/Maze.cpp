@@ -395,7 +395,7 @@ void AMaze::BeginPlay()
 	SC = new ServerSocketClient();
 	
 	// Tell the server about this maze
-	SC->SendStartCommand("2007", this);
+	SC->SendStartCommand(MazeCode, this);
 }
 
 // Called every frame
@@ -403,4 +403,41 @@ void AMaze::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	SC->SendPositions(this);
+
+	const FString Message = SC->ReadMessage();
+
+	UE_LOG(LogClass, Log, TEXT("Message: %s"), *Message);
+	
+	if(Message.StartsWith(MazeCode + " MonsterDirection "))
+	{
+		TArray<AActor*> FoundActors;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), MonsterBP, FoundActors);
+		AMonster* Monster = static_cast<AMonster*>(FoundActors[0]);
+		const FString Direction =  Message.Mid(22);
+		UE_LOG(LogClass, Log, TEXT("Message: \"%s\""), *Direction);
+
+		//TODO: cannot use a switch statement on FString
+		if (Direction.Equals(FString("north")))
+		{
+			Monster->DirectionChanged(North);
+		}else if(Direction.Equals( FString("east")))
+		{
+			Monster->DirectionChanged(East);
+		}
+		else if(Direction.Equals( FString("south")))
+		{
+			Monster->DirectionChanged(South);
+		}
+		else if(Direction.Equals( FString("west")))
+		{
+			Monster->DirectionChanged(West);
+		}
+		else
+		{
+			// Can't throw an exception here because Unreal Engine does not
+			// support building them to Android applications
+			GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
+				TEXT("Recieved an unkown MonsterDirection message: ") + Message));
+		}
+	}
 }

@@ -71,6 +71,7 @@ private:
 	const float BlueprintScale = 0.3f; // The size of each individual cell in the maze
 	const int PrefabBlueprintDepth = 2000 * BlueprintScale;
 	const int PrefabBlueprintWidth = 2000 * BlueprintScale;
+	const FString MazeCode = "2007";
 	ServerSocketClient* SC;
 
 public:

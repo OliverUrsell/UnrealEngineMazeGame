@@ -27,6 +27,7 @@ private:
 
 public:
 	const float ThresholdMagnitude = 25.0f;
+	UPROPERTY(EditAnywhere)
 	float Speed = 100.0f;
 	
 	mutable FMazeNode* GoalNode;
