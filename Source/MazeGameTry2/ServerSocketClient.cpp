@@ -26,8 +26,9 @@ void* ServerSocketClient::Get_In_Addr(sockaddr *Sa)
     return &((sockaddr_in6*)Sa)->sin6_addr;
 }
 
-ServerSocketClient::ServerSocketClient()
+int ServerSocketClient::Connect()
 {
+    // Returns 0 on success, 1 on error
     addrinfo hints, *servinfo, *p;
     int rv;
     char s[INET_ADDRSTRLEN];
@@ -38,7 +39,7 @@ ServerSocketClient::ServerSocketClient()
 
     if ((rv = getaddrinfo("127.0.0.1", PORT, &hints, &servinfo)) != 0) {
         UE_LOG(LogTemp, Error, TEXT("Failed to run getaddrinfo"));
-        return;
+        return 1;
     }
 
     // loop through all the results and connect to the first we can
@@ -60,7 +61,9 @@ ServerSocketClient::ServerSocketClient()
 
     if (p == nullptr) {
         UE_LOG(LogTemp, Error, TEXT("Failed to connect to server"));
-        return;
+        
+        // The server has failed to connect
+        return 1;
     }
 
     inet_ntop(p->ai_family, Get_In_Addr((struct sockaddr *)p->ai_addr),
@@ -70,21 +73,28 @@ ServerSocketClient::ServerSocketClient()
     // Put the socket in non-blocking mode
     if(fcntl(Sockfd, F_SETFL, fcntl(Sockfd, F_GETFL) | O_NONBLOCK) < 0) {
         UE_LOG(LogTemp, Error, TEXT("Failed to put socket in non-blocking mode"));
-        return;
+        return 1;
     }
 
     freeaddrinfo(servinfo); // all done with this structure
+
+    return 0;
 }
 
-void ServerSocketClient::SendStartCommand(const FString Code, const AMaze* Maze) const
+void ServerSocketClient::SendStartCommand() const
 {
     // Tell the server about this maze
-    this->SendMessage(FString("StartGame ") + Code + FString(" ") + Maze->ToJSONString());    
+    this->SendMessage(FString("StartGame ") + this->MazeCode);
+}
+
+void ServerSocketClient::SendMaze(const AMaze* Maze) const
+{
+    this->SendMessage(this->MazeCode + " Maze " + Maze->ToJSONString());
 }
 
 void ServerSocketClient::SendPositions(const AMaze* Maze) const
 {
-    this->SendMessage(FString("Positions ") + Maze->GetPositionsString());
+    this->SendMessage(FString(this->MazeCode + " Positions ") + Maze->GetPositionsString());
 }
 
 void ServerSocketClient::CloseSocket() const
@@ -96,36 +106,48 @@ void ServerSocketClient::SendMessage(const FString Message) const
 {
     // Add a new line as a message delimiter 
     FString MessageToSend = Message + FString("\n");
-    // UE_LOG(LogTemp, Log, TEXT("Sending Message... %s"), *Message);
+    // UE_LOG(LogTemp, Log, TEXT("Sending Message... %s"), *MessageToSend);
     //TODO: This might not send the whole message, see https://beej.us/guide/bgnet/html/#sendrecv about how send works
     send(this->Sockfd, TCHAR_TO_ANSI(*MessageToSend), MessageToSend.Len(), 0);
 }
 
-FString ServerSocketClient::ReadMessage() const
+std::tuple<FString, int> ServerSocketClient::ReadMessage() const
 {
+    // Returns an error code, 0 if success, 1 if server disconnected, 2 on failure
     ssize_t numbytes;
     ANSICHAR buf[MAXDATASIZE];
     if ((numbytes = recv(Sockfd, buf, MAXDATASIZE-1, 0)) == -1) {
         if(errno == EAGAIN || errno == EWOULDBLOCK)
         {
             // There was no data to read
-            return FString("");
+            return {FString(""), 0};
         }
+
+        // There was an error reading the data
         perror("recv");
-        exit(1);
+        return {FString(""), 2};
     }
-    
-    // if(buf[numbytes-1] == '\n')
-    // {
-    //     buf[numbytes-1] = '\0';
-    // }else
-    // {
-    //     buf[numbytes] = '\0'; 
-    // }
+
+    if(numbytes == 0)
+    {
+        // The server has disconnected
+        return {FString(""), 1};
+    }
 
     buf[numbytes] = '\0';
     
     UE_LOG(LogTemp, Display, TEXT("Received string \"%s\" with length - %d"), buf, numbytes);
     
-    return FString(buf).TrimStartAndEnd();
+    return {FString(buf).TrimStartAndEnd(), 0};
 }
+
+ServerSocketClient* ServerSocketClient::GetServerSocketClient()
+{
+    if(Singleton == nullptr) {
+        Singleton = new ServerSocketClient();
+    }
+    
+    return Singleton;
+}
+
+ServerSocketClient* ServerSocketClient::Singleton = nullptr;

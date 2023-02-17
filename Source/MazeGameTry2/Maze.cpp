@@ -392,10 +392,17 @@ void AMaze::BeginPlay()
 	
 	this->SpawnMazeGridBPs();
 	
-	SC = new ServerSocketClient();
+	SC = ServerSocketClient::GetServerSocketClient();
+	if(SC->Connect() != 0)
+	{
+		// Socket failed to connect, for now just change to the starting map 
+		UGameplayStatics::OpenLevel(this, FName(TEXT("StartingMap")));
+	}
 	
 	// Tell the server about this maze
-	SC->SendStartCommand(MazeCode, this);
+	SC->SendStartCommand();
+
+	SC->SendMaze(this);
 }
 
 // Called every frame
@@ -404,11 +411,37 @@ void AMaze::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	SC->SendPositions(this);
 
-	const FString Message = SC->ReadMessage();
+	const std::tuple<FString, int> MessageRead = SC->ReadMessage();
 
-	UE_LOG(LogClass, Log, TEXT("Message: %s"), *Message);
+	const int Error = std::get<1>(MessageRead);
+
+	if(Error != 0)
+	{
+		switch (Error)
+		{
+		case 1:
+			// The Server disconnected, for now just change to the starting map
+			UE_LOG(LogClass, Log, TEXT("Server disconnected, sending player back to starting level"), Error);
+			UGameplayStatics::OpenLevel(this, FName(TEXT("StartingMap")));
+			break;
+		case 2:
+			// There was some other error, for now just change to the starting map
+			UE_LOG(LogClass, Log, TEXT("Error on ReadMessage, sending player back to starting level"), Error);
+			UGameplayStatics::OpenLevel(this, FName(TEXT("StartingMap")));
+			break;
+		default:
+			// Unkown Error value from ReadMessage
+			UE_LOG(LogClass, Log, TEXT("Unkown error value %d from ReadMessage"), Error);
+			exit(1);
+		}
+		// The read failed
+	}
+
+	const FString Message = std::get<0>(MessageRead);
+
+	// UE_LOG(LogClass, Log, TEXT("Message: %s"), *Message);
 	
-	if(Message.StartsWith(MazeCode + " MonsterDirection "))
+	if(Message.StartsWith(SC->MazeCode + " MonsterDirection "))
 	{
 		TArray<AActor*> FoundActors;
 		UGameplayStatics::GetAllActorsOfClass(GetWorld(), MonsterBP, FoundActors);

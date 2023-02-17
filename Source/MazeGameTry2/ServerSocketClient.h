@@ -10,12 +10,16 @@ class ServerSocketClient
 {
 private:
 	int Sockfd;
+	static ServerSocketClient* Singleton;
 public:
 	static void* Get_In_Addr(sockaddr* Sa);
-	ServerSocketClient();
-	void SendStartCommand(const FString Code, const AMaze* Maze) const;
+	int Connect();
+	const FString MazeCode = "2007";
+	void SendStartCommand() const;
+	void SendMaze(const AMaze* Maze) const;
 	void SendPositions(const AMaze* Maze) const;
 	void CloseSocket() const;
 	void SendMessage(const FString Message) const;
-	FString ReadMessage() const;
+	std::tuple<FString, int> ReadMessage() const;
+	static ServerSocketClient* GetServerSocketClient();
 };
