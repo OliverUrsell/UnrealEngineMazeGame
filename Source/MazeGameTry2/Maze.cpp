@@ -393,15 +393,7 @@ void AMaze::BeginPlay()
 	this->SpawnMazeGridBPs();
 	
 	SC = ServerSocketClient::GetServerSocketClient();
-	if(SC->Connect() != 0)
-	{
-		// Socket failed to connect, for now just change to the starting map 
-		UGameplayStatics::OpenLevel(this, FName(TEXT("StartingMap")));
-	}
-	
 	// Tell the server about this maze
-	SC->SendStartCommand();
-
 	SC->SendMaze(this);
 }
 

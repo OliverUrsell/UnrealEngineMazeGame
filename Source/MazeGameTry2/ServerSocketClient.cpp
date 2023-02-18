@@ -78,7 +78,19 @@ int ServerSocketClient::Connect()
 
     freeaddrinfo(servinfo); // all done with this structure
 
+    this->Connected = true;
+    
     return 0;
+}
+
+bool ServerSocketClient::IsConnected() const
+{
+    return this->Connected;
+}
+
+void ServerSocketClient::Disconnected()
+{
+    this->Connected = false;
 }
 
 void ServerSocketClient::SendStartCommand() const
@@ -111,7 +123,7 @@ void ServerSocketClient::SendMessage(const FString Message) const
     send(this->Sockfd, TCHAR_TO_ANSI(*MessageToSend), MessageToSend.Len(), 0);
 }
 
-std::tuple<FString, int> ServerSocketClient::ReadMessage() const
+std::tuple<FString, int> ServerSocketClient::ReadMessage()
 {
     // Returns an error code, 0 if success, 1 if server disconnected, 2 on failure
     ssize_t numbytes;
@@ -131,6 +143,7 @@ std::tuple<FString, int> ServerSocketClient::ReadMessage() const
     if(numbytes == 0)
     {
         // The server has disconnected
+        Disconnected();
         return {FString(""), 1};
     }
 
