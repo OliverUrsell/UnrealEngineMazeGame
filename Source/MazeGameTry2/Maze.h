@@ -23,6 +23,7 @@ public:
 	
 	FMazeNode* Start;
 	FMazeNode* End;
+	FMazeNode* MonsterStart;
 	std::vector<std::vector<FMazeNode*>> Nodes;
 
 	FMazeNode* GetNodeAtPosition(FMazeCoordinates Coordinates) const;

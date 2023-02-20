@@ -19,4 +19,7 @@ public:
 	};
 	static std::vector<FMazeNode_Wall> GetNodeWalls(const AMaze* Maze, FMazeNode* Node);
 	virtual void GenerateMaze(AMaze* Maze) override;
+	virtual FMazeNode* GetStartPosition(AMaze* Maze) override;
+	virtual FMazeNode* GetEndPosition(AMaze* Maze, FMazeNode* Start) override;
+	virtual FMazeNode* GetMonsterPosition(AMaze* Maze, FMazeNode* Start) override;
 };

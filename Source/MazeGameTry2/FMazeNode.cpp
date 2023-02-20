@@ -97,6 +97,11 @@ EMaze_Direction FMazeNode::GetRandomOpenWall() const
 	}
 }
 
+bool FMazeNode::WallExists() const
+{
+	return GetWallStatus(North) || GetWallStatus(East) || GetWallStatus(South) || GetWallStatus(West); 
+}
+
 bool FMazeNode::GetWallStatus(const EMaze_Direction Direction) const
 {
 	switch (Direction)

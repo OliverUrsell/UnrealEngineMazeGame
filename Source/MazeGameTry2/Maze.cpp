@@ -205,33 +205,27 @@ std::pair<FMazeCoordinates, FRotator> AMaze::GetPositionAndRotationForGoal() con
 std::pair<FMazeNode*, std::pair<EMaze_Direction, FRotator>>
 AMaze::GetMonsterStartingPositionAndRotation() const
 {
-	/* initialize random seed: */
-	std::srand (time(nullptr));
-	const int Random_X = std::rand() % this->Depth;
-	const int Random_Y = std::rand() % this->Width;
-	FMazeNode* Node = this->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Random_X), static_cast<float>(Random_Y)});
-	
-	const EMaze_Direction Direction = Node->GetRandomOpenWall();
+	const EMaze_Direction Direction = this->MonsterStart->GetRandomOpenWall();
 	switch(Direction)
 	{
 	case North:
 		return {
-			Node,
+			this->MonsterStart,
 			{Direction, FRotator(0.0,270.0,0.0)},
 		};
 	case East:
 		return {
-			Node,
+			this->MonsterStart,
 			{Direction, FRotator(0.0,0.0,0.0)},
 		};
 	case South:
 		return {
-			Node,
+			this->MonsterStart,
 			{Direction, FRotator(0.0,90.0,0.0)},
 		};
 	case West:
 		return {
-			Node,
+			this->MonsterStart,
 			{Direction, FRotator(0.0,180.0,0.0)},
 		};
 	default:
@@ -240,7 +234,7 @@ AMaze::GetMonsterStartingPositionAndRotation() const
 		GEngine->AddOnScreenDebugMessage(1, 5.0, FColor::White,  FString(
 			TEXT("Got an invalid value of EMazeDirection")));
 		return {
-			Node,
+			this->MonsterStart,
 			{North, FRotator(0.0,0.0,0.0)},
 		};
 	}

@@ -120,10 +120,149 @@ void SimplePrimMaze::GenerateMaze(AMaze* Maze)
 		// Remove the Wall at the selected index from Walls
 		Walls.erase(Walls.begin() + SelectedIndex);
 	}
+}
 
-	// Set the start to the bottom left
-	Maze->Start = Start;
+FMazeNode* SimplePrimMaze::GetStartPosition(AMaze* Maze)
+{
+	// Get a start position on the edges of the map
+	constexpr int Edge_Depth = 2;
+	
+	/* initialize random seed: */
+	std::srand (time(nullptr));
 
-	// Set the end to the top right
-	Maze->End = Maze->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Maze->Depth-1), static_cast<float>(Maze->Width-1)});
+	const int Orientation = std::rand() % 2;
+	int Random_X, Random_Y;
+	switch (Orientation)
+	{
+	case 0:
+		// Generate a point along the top or bottom
+		Random_X = std::rand() % Edge_Depth*2;
+		Random_Y = std::rand() % Maze->Width;
+		// If Random is in the second half map this to the opposite edge of the maze
+		if(Random_X >= Edge_Depth)
+		{
+			Random_X = Maze->Depth - (Random_X - Edge_Depth) - 1;
+		}
+		break;
+	case 1:
+		// Generate a point along the left or right
+		Random_X = std::rand() % Maze->Depth;
+		Random_Y = std::rand() % Edge_Depth*2;
+		// If Random is in the second half map this to the opposite edge of the maze
+		if(Random_Y >= Edge_Depth)
+		{
+			Random_Y = Maze->Width - (Random_Y - Edge_Depth) - 1;
+		}
+		break;
+	default:
+		// We got a value outside of the expected values for Orientation
+		exit(1);
+	}
+
+	UE_LOG(LogTemp, Error, TEXT("Start Position: %d, %d"), Random_X, Random_Y);
+	
+	return Maze->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Random_X), static_cast<float>(Random_Y)});
+}
+
+FMazeNode* SimplePrimMaze::GetEndPosition(AMaze* Maze, FMazeNode* Start)
+{
+	// Get a goal position on the edges of the map, on the opposite quadrant from the player
+	
+	/* initialize random seed: */
+	std::srand (time(nullptr));
+	constexpr int Edge_Depth = 2;
+
+	const int Orientation = std::rand() % 2;
+	int Random_X, Random_Y;
+	
+	switch (Orientation)
+	{
+	case 0:
+		// Generate a point along the top or bottom
+		Random_X = std::rand() % Edge_Depth;
+		Random_Y = std::rand() % Maze->Width/2;
+		break;
+	case 1:
+		// Generate a point along the left or right
+		Random_X = std::rand() % Maze->Depth;
+		Random_Y = std::rand() % Edge_Depth/2;
+		break;
+	default:
+		// We got a value outside of the expected values for Orientation
+		exit(1);
+		return nullptr;
+	}
+
+	int Out_X, Out_Y;
+
+	// If start x position is greater than half the depth, put the Maze position in the first 3 of the edges
+	// else put it in the end half
+
+	if(Start->Coordinates.X >= Maze->Depth/2)
+	{
+		Out_X = Random_X;
+	}
+	else
+	{
+		Out_X = Maze->Depth - Random_X - 1;
+	}
+
+	// If start y position is greater than half the width, put the maze position in the first 3 of the edges
+	// else put it in the end half
+
+	if(Start->Coordinates.Y >= Maze->Width/2)
+	{
+		Out_Y = Random_Y;
+	}
+	else
+	{
+		Out_Y = Maze->Width - Random_Y - 1;
+	}
+
+	UE_LOG(LogTemp, Error, TEXT("End Position: %d, %d"), Out_X, Out_Y);
+	return Maze->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Out_X), static_cast<float>(Out_Y)});
+}
+
+FMazeNode* SimplePrimMaze::GetMonsterPosition(AMaze* Maze, FMazeNode* Start)
+{
+	// Get a monster position outside of the quadrant the player is in
+	
+	/* initialize random seed: */
+	std::srand (time(nullptr));
+
+	const int Orientation = std::rand() % 2;
+	int Random_X, Random_Y;
+	
+	switch (Orientation)
+	{
+	case 0:
+		// Avoid the player in the X direction
+		Random_Y = std::rand() % Maze->Width;
+		if(Start->Coordinates.X >= Maze->Depth/2)
+		{
+			Random_X = std::rand() % Maze->Depth/2;
+		}else
+		{
+			Random_X = Maze->Depth/2 + std::rand() % Maze->Depth/2;
+		}
+		break;
+	case 1:
+		// Avoid the player in the Y direction
+		Random_X = std::rand() % Maze->Depth;
+		if(Start->Coordinates.Y >= Maze->Width/2)
+		{
+			Random_Y = std::rand() % Maze->Width/2;
+		}else
+		{
+			Random_Y = Maze->Width/2 + std::rand() % Maze->Width/2;
+		}
+		break;
+	default:
+		// We got a value outside of the expected values for Orientation
+		exit(1);
+		return nullptr;
+	}
+
+	UE_LOG(LogTemp, Error, TEXT("Monster Position: %d, %d"), Random_X, Random_Y);
+	return Maze->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Random_X), static_cast<float>(Random_Y)});
 }
