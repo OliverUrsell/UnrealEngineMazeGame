@@ -15,6 +15,8 @@
 #include "Kismet/GameplayStatics.h"
 #include "ServerSocketClient.h"
 
+int AMaze::Difficulty = 0;
+
 class AMonster;
 // Sets default values
 AMaze::AMaze()
@@ -465,4 +467,26 @@ void AMaze::Tick(float DeltaTime)
 				TEXT("Recieved an unkown MonsterDirection message: ") + Message));
 		}
 	}
+}
+
+
+void AMaze::ResetDifficultyLevel()
+{
+	Difficulty = 0;
+}
+
+void AMaze::IncreaseDifficultyLevel()
+{
+	Difficulty += 1;
+}
+
+int AMaze::GetDifficultyLevel()
+{
+	return Difficulty;
+}
+
+void AMaze::LostMaze() const
+{
+	ResetDifficultyLevel();
+	UGameplayStatics::OpenLevel(this, FName(TEXT("LostMap")));
 }

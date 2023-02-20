@@ -77,6 +77,20 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	static int Difficulty;
+
+	UFUNCTION(BlueprintCallable)
+	static void ResetDifficultyLevel();
+
+	UFUNCTION(BlueprintCallable)
+	static void IncreaseDifficultyLevel();
+
+	UFUNCTION(BlueprintCallable)
+	static int GetDifficultyLevel();
+
+	UFUNCTION(BlueprintCallable)
+	void LostMaze() const;
+
 	TSubclassOf<AActor> GetActorForExits(FNodeExits Exits) const;
 	FVector MazeCoordinatesToWorldLocation(FMazeCoordinates Coordinates) const;
 	FMazeCoordinates WorldLocationToMazeCoordinates(FVector Location) const;

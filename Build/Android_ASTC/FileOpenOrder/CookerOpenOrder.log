@@ -577,27 +577,27 @@
 "../../../Engine/Content/EditorResources/T_EditorHelp.uasset" 576
 "../../../Engine/Content/EditorResources/T_EditorHelp.uexp" 577
 "../../../Engine/Content/EditorResources/T_EditorHelp.ubulk" 578
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Sign.uasset" 579
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Sign.uexp" 580
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Round.uasset" 581
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Round.uexp" 582
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/DebugNumberPeriod.uasset" 583
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/DebugNumberPeriod.uexp" 584
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/DebugNumberStrip.uasset" 585
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/DebugNumberStrip.uexp" 586
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/ComputeMipLevel.uasset" 587
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/ComputeMipLevel.uexp" 588
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/TextureCropping.uasset" 589
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/TextureCropping.uexp" 590
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DebugScalarValues.uasset" 591
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DebugScalarValues.uexp" 592
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DebugFloat2Values.uasset" 593
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DebugFloat2Values.uexp" 594
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/flipbook.uasset" 595
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/flipbook.uexp" 596
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/flipbook.ubulk" 597
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/FlipBook.uasset" 598
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/FlipBook.uexp" 599
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/DebugNumberPeriod.uasset" 579
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/DebugNumberPeriod.uexp" 580
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/DebugNumberStrip.uasset" 581
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/DebugNumberStrip.uexp" 582
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/ComputeMipLevel.uasset" 583
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/ComputeMipLevel.uexp" 584
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/TextureCropping.uasset" 585
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/TextureCropping.uexp" 586
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DebugScalarValues.uasset" 587
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DebugScalarValues.uexp" 588
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DebugFloat2Values.uasset" 589
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DebugFloat2Values.uexp" 590
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/flipbook.uasset" 591
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/flipbook.uexp" 592
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/flipbook.ubulk" 593
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/FlipBook.uasset" 594
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/FlipBook.uexp" 595
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Sign.uasset" 596
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Sign.uexp" 597
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Round.uasset" 598
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Round.uexp" 599
 "../../../Engine/Content/EditorMaterials/HelpActorMaterial.uasset" 600
 "../../../Engine/Content/EditorMaterials/HelpActorMaterial.uexp" 601
 "../../../Engine/Content/EditorMaterials/WidgetMaterial_Y.uasset" 602
@@ -943,33 +943,33 @@
 "../../../Engine/Plugins/2D/Paper2D/Content/DefaultPaperTerrainMaterial.uexp" 942
 "../../../Engine/Plugins/2D/Paper2D/Content/MaskedUnlitSpriteMaterial.uasset" 943
 "../../../Engine/Plugins/2D/Paper2D/Content/MaskedUnlitSpriteMaterial.uexp" 944
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackDirection.uasset" 945
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackDirection.uexp" 946
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.uasset" 947
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.uexp" 948
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.ubulk" 949
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.uasset" 950
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.uexp" 951
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWindMotion.uasset" 952
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWindMotion.uexp" 953
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackInteger3.uasset" 954
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackInteger3.uexp" 955
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBranchMotion.uasset" 956
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBranchMotion.uexp" 957
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ObjectLocalBounds.uasset" 958
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ObjectLocalBounds.uexp" 959
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW.uasset" 960
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW.uexp" 961
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.uasset" 962
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.uexp" 963
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWind.uasset" 964
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWind.uexp" 965
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/EmptyNormal.uasset" 966
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/EmptyNormal.uexp" 967
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/Empty.uasset" 968
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/Empty.uexp" 969
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboard.uasset" 970
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboard.uexp" 971
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ObjectLocalBounds.uasset" 945
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ObjectLocalBounds.uexp" 946
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW.uasset" 947
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW.uexp" 948
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.uasset" 949
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.uexp" 950
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.uasset" 951
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.uexp" 952
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/EmptyNormal.uasset" 953
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/EmptyNormal.uexp" 954
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/Empty.uasset" 955
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/Empty.uexp" 956
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackInteger3.uasset" 957
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackInteger3.uexp" 958
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboard.uasset" 959
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboard.uexp" 960
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackDirection.uasset" 961
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackDirection.uexp" 962
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.uasset" 963
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.uexp" 964
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.ubulk" 965
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWindMotion.uasset" 966
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWindMotion.uexp" 967
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBranchMotion.uasset" 968
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBranchMotion.uexp" 969
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWind.uasset" 970
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWind.uexp" 971
 "../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboardMaster.uasset" 972
 "../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboardMaster.uexp" 973
 "../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeCameraFacing.uasset" 974
@@ -980,312 +980,330 @@
 "../../../Engine/Content/Maps/Entry_BuiltData.uexp" 979
 "../../../Engine/Content/Maps/Entry.uexp" 980
 "../../../Engine/Content/Maps/Entry.umap" 981
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/MRTexture.uasset" 982
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/MRTexture.uexp" 983
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/MRTexture.ubulk" 984
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/BaseTexture.uasset" 985
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/BaseTexture.uexp" 986
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/BaseTexture.ubulk" 987
-"../../../Engine/Content/EngineResources/Black.uasset" 988
-"../../../Engine/Content/EngineResources/Black.uexp" 989
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/M_XRController.uasset" 990
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/M_XRController.uexp" 991
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/MI_OculusTouch_v2.uasset" 992
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/MI_OculusTouch_v2.uexp" 993
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/Right/right_OculusTouch_v2Controller.uasset" 994
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/Right/right_OculusTouch_v2Controller.uexp" 995
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/Left/left_OculusTouch_v2Controller.uasset" 996
-"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/Left/left_OculusTouch_v2Controller.uexp" 997
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand_Skeleton.uasset" 998
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand_Skeleton.uexp" 999
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand_PhysicsAsset.uasset" 1000
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand_PhysicsAsset.uexp" 1001
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_N.uasset" 1002
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_N.uexp" 1003
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_N.ubulk" 1004
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_AORM.uasset" 1005
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_AORM.uexp" 1006
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_AORM.ubulk" 1007
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_BC.uasset" 1008
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_BC.uexp" 1009
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_BC.ubulk" 1010
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/m_hand.uasset" 1011
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/m_hand.uexp" 1012
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand.uasset" 1013
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand.uexp" 1014
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraInactiveMode.uasset" 1015
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraInactiveMode.uexp" 1016
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraEmitterScalabilityMode_Limited.uasset" 1017
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraEmitterScalabilityMode_Limited.uexp" 1018
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_InfiniteLoopDuration.uasset" 1019
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_InfiniteLoopDuration.uexp" 1020
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_EmitterStateOptions.uasset" 1021
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_EmitterStateOptions.uexp" 1022
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Update/Lifetime/ParticleState.uasset" 1023
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Update/Lifetime/ParticleState.uexp" 1024
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/System/SystemChangeState.uasset" 1025
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/System/SystemChangeState.uexp" 1026
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraSystemInactiveMode.uasset" 1027
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraSystemInactiveMode.uexp" 1028
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/System/SystemState.uasset" 1029
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/System/SystemState.uexp" 1030
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraRandomnessMode.uasset" 1031
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraRandomnessMode.uexp" 1032
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraRandomnessEvaluation.uasset" 1033
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraRandomnessEvaluation.uexp" 1034
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRangeFloat.uasset" 1035
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRangeFloat.uexp" 1036
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Emitter/SpawnBurst_Instantaneous.uasset" 1037
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Emitter/SpawnBurst_Instantaneous.uexp" 1038
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Emitter/EmitterChangeState.uasset" 1039
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Emitter/EmitterChangeState.uexp" 1040
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraExecutionStateManagement.uasset" 1041
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraExecutionStateManagement.uexp" 1042
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraEmitterLifeCycleMode.uasset" 1043
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraEmitterLifeCycleMode.uexp" 1044
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Emitter/EmitterState.uasset" 1045
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Emitter/EmitterState.uexp" 1046
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Multiply/Multiply_VectorByFloat.uasset" 1047
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Multiply/Multiply_VectorByFloat.uexp" 1048
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NPC_VRTemplate.uasset" 1049
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NPC_VRTemplate.uexp" 1050
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/DefaultRibbonMaterial_NoGradient.uasset" 1051
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/DefaultRibbonMaterial_NoGradient.uexp" 1052
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Update/Color/Color.uasset" 1053
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Update/Color/Color.uexp" 1054
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/GetRandomInfo.uasset" 1055
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/GetRandomInfo.uexp" 1056
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/RandomRangeFloat.uasset" 1057
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/RandomRangeFloat.uexp" 1058
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/SimulationPosition.uasset" 1059
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/SimulationPosition.uexp" 1060
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/InitializeParticle.uasset" 1061
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/InitializeParticle.uexp" 1062
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/DirectionAndLengthSafe.uasset" 1063
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/DirectionAndLengthSafe.uexp" 1064
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Solvers/SolveForcesAndVelocity.uasset" 1065
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Solvers/SolveForcesAndVelocity.uexp" 1066
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Spline/FindPositionOnBezierSpline.uasset" 1067
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Spline/FindPositionOnBezierSpline.uexp" 1068
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/NormalizedExecutionIndex.uasset" 1069
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/NormalizedExecutionIndex.uexp" 1070
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/SpawnBeam.uasset" 1071
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/SpawnBeam.uexp" 1072
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/BeamWidth.uasset" 1073
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/BeamWidth.uexp" 1074
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformBase.uasset" 1075
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformBase.uexp" 1076
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformVector.uasset" 1077
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformVector.uexp" 1078
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformPosition.uasset" 1079
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformPosition.uexp" 1080
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Helpers/SimulationPosition.uasset" 1081
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Helpers/SimulationPosition.uexp" 1082
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/BeamEmitterSetup.uasset" 1083
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/BeamEmitterSetup.uexp" 1084
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/ValueFromCurve/FloatFromCurve.uasset" 1085
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/ValueFromCurve/FloatFromCurve.uexp" 1086
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/ValueFromCurve/ColorFromCurve.uasset" 1087
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/ValueFromCurve/ColorFromCurve.uexp" 1088
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_TeleportTrace.uasset" 1089
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_TeleportTrace.uexp" 1090
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraChannelCorrelation.uasset" 1091
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraChannelCorrelation.uexp" 1092
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_PositionInitializationMode.uasset" 1093
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_PositionInitializationMode.uexp" 1094
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_MassInitializationMode.uasset" 1095
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_MassInitializationMode.uexp" 1096
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_LifetimeMode.uasset" 1097
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_LifetimeMode.uexp" 1098
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_ColorInitializationMode.uasset" 1099
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_ColorInitializationMode.uexp" 1100
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/LinearColor/HueShiftLinearColor.uasset" 1101
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/LinearColor/HueShiftLinearColor.uexp" 1102
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRange.uasset" 1103
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRange.uexp" 1104
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/Ribbons/ENiagara_UnsetDirectSet.uasset" 1105
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/Ribbons/ENiagara_UnsetDirectSet.uexp" 1106
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/InitializeRibbon.uasset" 1107
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/InitializeRibbon.uexp" 1108
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Execution/ReturnNormalizedExecIndex.uasset" 1109
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Execution/ReturnNormalizedExecIndex.uexp" 1110
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DepthFromWorldPosition.uasset" 1111
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DepthFromWorldPosition.uexp" 1112
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/Functions/MF_OccludedPixels.uasset" 1113
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/Functions/MF_OccludedPixels.uexp" 1114
-"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 1115
-"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uexp" 1116
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_TeleportCylinder.uasset" 1117
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_TeleportCylinder.uexp" 1118
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_TeleportNoise.uasset" 1119
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_TeleportNoise.uexp" 1120
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraTorusMode.uasset" 1121
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraTorusMode.uexp" 1122
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/AxisAngleToQuaternion.uasset" 1123
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/AxisAngleToQuaternion.uexp" 1124
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/RandomRange.uasset" 1125
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/RandomRange.uexp" 1126
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/ParametricTorusKnot.uasset" 1127
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/ParametricTorusKnot.uexp" 1128
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/PolarToCartesianCoordinates.uasset" 1129
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/PolarToCartesianCoordinates.uexp" 1130
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/ParametricTorus.uasset" 1131
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/ParametricTorus.uexp" 1132
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/MultiplyQuaternion.uasset" 1133
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/MultiplyQuaternion.uexp" 1134
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/MultiplyVectorWithQuaternion.uasset" 1135
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/MultiplyVectorWithQuaternion.uexp" 1136
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/FindQuatBetween.uasset" 1137
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/FindQuatBetween.uexp" 1138
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraTorusDistributionMode.uasset" 1139
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraTorusDistributionMode.uexp" 1140
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Location/TorusLocation.uasset" 1141
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Location/TorusLocation.uexp" 1142
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_UVFlippingMode.uasset" 1143
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_UVFlippingMode.uexp" 1144
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_SpriteRotationMode.uasset" 1145
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_SpriteRotationMode.uexp" 1146
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_SizeScaleMode.uasset" 1147
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_SizeScaleMode.uexp" 1148
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRangeInteger.uasset" 1149
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRangeInteger.uexp" 1150
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomBool.uasset" 1151
-"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomBool.uexp" 1152
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/Ribbons/ENiagara_UnsetDirectSetRandom.uasset" 1153
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/Ribbons/ENiagara_UnsetDirectSetRandom.uexp" 1154
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/V2/InitializeParticle.uasset" 1155
-"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/V2/InitializeParticle.uexp" 1156
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_TeleportRing.uasset" 1157
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_TeleportRing.uexp" 1158
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraArraySamplingMode.uasset" 1159
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraArraySamplingMode.uexp" 1160
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_WrapClamp.uasset" 1161
-"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_WrapClamp.uexp" 1162
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Multiply/Multiply_Vector.uasset" 1163
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Multiply/Multiply_Vector.uexp" 1164
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Execution/ReturnExecIndex.uasset" 1165
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Execution/ReturnExecIndex.uexp" 1166
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Arrays/SelectVectorFromArray.uasset" 1167
-"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Arrays/SelectVectorFromArray.uexp" 1168
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_PlayAreaBounds.uasset" 1169
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_PlayAreaBounds.uexp" 1170
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRTeleportVisualizer.uasset" 1171
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRTeleportVisualizer.uexp" 1172
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_MenuLaser.uasset" 1173
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_MenuLaser.uexp" 1174
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/WidgetMenu.uasset" 1175
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/WidgetMenu.uexp" 1176
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_VRCursor.uasset" 1177
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_VRCursor.uexp" 1178
-"../../../Engine/Content/BasicShapes/Sphere.uasset" 1179
-"../../../Engine/Content/BasicShapes/Sphere.uexp" 1180
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/Menu.uasset" 1181
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/Menu.uexp" 1182
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Enum_HandAnim.uasset" 1183
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Enum_HandAnim.uexp" 1184
-"../../../Engine/Content/Animation/DefaultAnimBoneCompressionSettings.uasset" 1185
-"../../../Engine/Content/Animation/DefaultAnimBoneCompressionSettings.uexp" 1186
-"../../../Engine/Content/Animation/DefaultAnimCurveCompressionSettings.uasset" 1187
-"../../../Engine/Content/Animation/DefaultAnimCurveCompressionSettings.uexp" 1188
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_ThumbsUpMiddleOpen.uasset" 1189
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_ThumbsUpMiddleOpen.uexp" 1190
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_ThumbsUp.uasset" 1191
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_ThumbsUp.uexp" 1192
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_PointMiddleOpen.uasset" 1193
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_PointMiddleOpen.uexp" 1194
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Pointing.uasset" 1195
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Pointing.uexp" 1196
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Open.uasset" 1197
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Open.uexp" 1198
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_GripMiddleOpen.uasset" 1199
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_GripMiddleOpen.uexp" 1200
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Grip.uasset" 1201
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Grip.uexp" 1202
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_FingerGun.uasset" 1203
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_FingerGun.uexp" 1204
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Enum_ObjectType.uasset" 1205
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Enum_ObjectType.uexp" 1206
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/GrabType.uasset" 1207
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/GrabType.uexp" 1208
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRInteractionBPI.uasset" 1209
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRInteractionBPI.uexp" 1210
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Haptics/GrabHapticEffect.uasset" 1211
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Haptics/GrabHapticEffect.uexp" 1212
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/GrabComponent.uasset" 1213
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/GrabComponent.uexp" 1214
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/BP_HandAnim.uasset" 1215
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/BP_HandAnim.uexp" 1216
-"../../../Engine/Content/BasicShapes/BasicShapeMaterial.uasset" 1217
-"../../../Engine/Content/BasicShapes/BasicShapeMaterial.uexp" 1218
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Update/Color/Color.uasset" 982
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Update/Color/Color.uexp" 983
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/SimulationPosition.uasset" 984
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/SimulationPosition.uexp" 985
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraRandomnessMode.uasset" 986
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraRandomnessMode.uexp" 987
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/GetRandomInfo.uasset" 988
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/GetRandomInfo.uexp" 989
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/RandomRangeFloat.uasset" 990
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/RandomRangeFloat.uexp" 991
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/InitializeParticle.uasset" 992
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/InitializeParticle.uexp" 993
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/DirectionAndLengthSafe.uasset" 994
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/DirectionAndLengthSafe.uexp" 995
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Solvers/SolveForcesAndVelocity.uasset" 996
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Solvers/SolveForcesAndVelocity.uexp" 997
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Spline/FindPositionOnBezierSpline.uasset" 998
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Spline/FindPositionOnBezierSpline.uexp" 999
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/NormalizedExecutionIndex.uasset" 1000
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/NormalizedExecutionIndex.uexp" 1001
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/SpawnBeam.uasset" 1002
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/SpawnBeam.uexp" 1003
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/BeamWidth.uasset" 1004
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/BeamWidth.uexp" 1005
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Helpers/SimulationPosition.uasset" 1006
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Helpers/SimulationPosition.uexp" 1007
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Multiply/Multiply_VectorByFloat.uasset" 1008
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Multiply/Multiply_VectorByFloat.uexp" 1009
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformBase.uasset" 1010
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformBase.uexp" 1011
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformVector.uasset" 1012
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformVector.uexp" 1013
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformPosition.uasset" 1014
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Localspace/TransformPosition.uexp" 1015
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/BeamEmitterSetup.uasset" 1016
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Beams/BeamEmitterSetup.uexp" 1017
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/ValueFromCurve/FloatFromCurve.uasset" 1018
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/ValueFromCurve/FloatFromCurve.uexp" 1019
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/ValueFromCurve/ColorFromCurve.uasset" 1020
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/ValueFromCurve/ColorFromCurve.uexp" 1021
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraSystemInactiveMode.uasset" 1022
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraSystemInactiveMode.uexp" 1023
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraInactiveMode.uasset" 1024
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraInactiveMode.uexp" 1025
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraEmitterScalabilityMode_Limited.uasset" 1026
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraEmitterScalabilityMode_Limited.uexp" 1027
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraEmitterLifeCycleMode.uasset" 1028
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraEmitterLifeCycleMode.uexp" 1029
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_InfiniteLoopDuration.uasset" 1030
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_InfiniteLoopDuration.uexp" 1031
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_EmitterStateOptions.uasset" 1032
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_EmitterStateOptions.uexp" 1033
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Update/Lifetime/ParticleState.uasset" 1034
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Update/Lifetime/ParticleState.uexp" 1035
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/System/SystemChangeState.uasset" 1036
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/System/SystemChangeState.uexp" 1037
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/System/SystemState.uasset" 1038
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/System/SystemState.uexp" 1039
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraRandomnessEvaluation.uasset" 1040
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraRandomnessEvaluation.uexp" 1041
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRangeFloat.uasset" 1042
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRangeFloat.uexp" 1043
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Emitter/SpawnBurst_Instantaneous.uasset" 1044
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Emitter/SpawnBurst_Instantaneous.uexp" 1045
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Emitter/EmitterChangeState.uasset" 1046
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Emitter/EmitterChangeState.uexp" 1047
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraExecutionStateManagement.uasset" 1048
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraExecutionStateManagement.uexp" 1049
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Emitter/EmitterState.uasset" 1050
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Emitter/EmitterState.uexp" 1051
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NPC_VRTemplate.uasset" 1052
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NPC_VRTemplate.uexp" 1053
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/DefaultRibbonMaterial_NoGradient.uasset" 1054
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/DefaultRibbonMaterial_NoGradient.uexp" 1055
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_TeleportTrace.uasset" 1056
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_TeleportTrace.uexp" 1057
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraTorusMode.uasset" 1058
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraTorusMode.uexp" 1059
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraTorusDistributionMode.uasset" 1060
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraTorusDistributionMode.uexp" 1061
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/AxisAngleToQuaternion.uasset" 1062
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/AxisAngleToQuaternion.uexp" 1063
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/RandomRange.uasset" 1064
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/RandomRange.uexp" 1065
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/ParametricTorusKnot.uasset" 1066
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/ParametricTorusKnot.uexp" 1067
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/PolarToCartesianCoordinates.uasset" 1068
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/PolarToCartesianCoordinates.uexp" 1069
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/ParametricTorus.uasset" 1070
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/ParametricTorus.uexp" 1071
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/MultiplyQuaternion.uasset" 1072
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/MultiplyQuaternion.uexp" 1073
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/MultiplyVectorWithQuaternion.uasset" 1074
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/MultiplyVectorWithQuaternion.uexp" 1075
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/FindQuatBetween.uasset" 1076
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/Rotation/FindQuatBetween.uexp" 1077
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Location/TorusLocation.uasset" 1078
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Location/TorusLocation.uexp" 1079
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_UVFlippingMode.uasset" 1080
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_UVFlippingMode.uexp" 1081
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_SpriteRotationMode.uasset" 1082
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_SpriteRotationMode.uexp" 1083
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_SizeScaleMode.uasset" 1084
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_SizeScaleMode.uexp" 1085
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/Ribbons/ENiagara_UnsetDirectSetRandom.uasset" 1086
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/Ribbons/ENiagara_UnsetDirectSetRandom.uexp" 1087
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraChannelCorrelation.uasset" 1088
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraChannelCorrelation.uexp" 1089
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_PositionInitializationMode.uasset" 1090
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_PositionInitializationMode.uexp" 1091
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_MassInitializationMode.uasset" 1092
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_MassInitializationMode.uexp" 1093
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_LifetimeMode.uasset" 1094
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_LifetimeMode.uexp" 1095
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_ColorInitializationMode.uasset" 1096
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_ColorInitializationMode.uexp" 1097
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRangeInteger.uasset" 1098
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRangeInteger.uexp" 1099
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomBool.uasset" 1100
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomBool.uexp" 1101
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/LinearColor/HueShiftLinearColor.uasset" 1102
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/LinearColor/HueShiftLinearColor.uexp" 1103
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRange.uasset" 1104
+"../../../Engine/Plugins/FX/Niagara/Content/Functions/V2/CalculateRandomRange.uexp" 1105
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/V2/InitializeParticle.uasset" 1106
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/V2/InitializeParticle.uexp" 1107
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/Ribbons/ENiagara_UnsetDirectSet.uasset" 1108
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/Ribbons/ENiagara_UnsetDirectSet.uexp" 1109
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/InitializeRibbon.uasset" 1110
+"../../../Engine/Plugins/FX/Niagara/Content/Modules/Spawn/Initialization/InitializeRibbon.uexp" 1111
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Execution/ReturnNormalizedExecIndex.uasset" 1112
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Execution/ReturnNormalizedExecIndex.uexp" 1113
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DepthFromWorldPosition.uasset" 1114
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DepthFromWorldPosition.uexp" 1115
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/Functions/MF_OccludedPixels.uasset" 1116
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/Functions/MF_OccludedPixels.uexp" 1117
+"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 1118
+"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uexp" 1119
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_TeleportCylinder.uasset" 1120
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_TeleportCylinder.uexp" 1121
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_TeleportNoise.uasset" 1122
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_TeleportNoise.uexp" 1123
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_TeleportRing.uasset" 1124
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_TeleportRing.uexp" 1125
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraArraySamplingMode.uasset" 1126
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagaraArraySamplingMode.uexp" 1127
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_WrapClamp.uasset" 1128
+"../../../Engine/Plugins/FX/Niagara/Content/Enums/ENiagara_WrapClamp.uexp" 1129
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Multiply/Multiply_Vector.uasset" 1130
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Multiply/Multiply_Vector.uexp" 1131
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Execution/ReturnExecIndex.uasset" 1132
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Execution/ReturnExecIndex.uexp" 1133
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Arrays/SelectVectorFromArray.uasset" 1134
+"../../../Engine/Plugins/FX/Niagara/Content/DynamicInputs/Arrays/SelectVectorFromArray.uexp" 1135
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_PlayAreaBounds.uasset" 1136
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_PlayAreaBounds.uexp" 1137
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRTeleportVisualizer.uasset" 1138
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRTeleportVisualizer.uexp" 1139
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_MenuLaser.uasset" 1140
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/VFX/NS_MenuLaser.uexp" 1141
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/WidgetMenu.uasset" 1142
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/WidgetMenu.uexp" 1143
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_VRCursor.uasset" 1144
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Materials/M_VRCursor.uexp" 1145
+"../../../Engine/Content/BasicShapes/Sphere.uasset" 1146
+"../../../Engine/Content/BasicShapes/Sphere.uexp" 1147
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/Menu.uasset" 1148
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/Menu.uexp" 1149
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRInteractionBPI.uasset" 1150
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRInteractionBPI.uexp" 1151
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/GrabType.uasset" 1152
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/GrabType.uexp" 1153
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Haptics/GrabHapticEffect.uasset" 1154
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Haptics/GrabHapticEffect.uexp" 1155
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/GrabComponent.uasset" 1156
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/GrabComponent.uexp" 1157
+"../../../Engine/Content/BasicShapes/BasicShapeMaterial.uasset" 1158
+"../../../Engine/Content/BasicShapes/BasicShapeMaterial.uexp" 1159
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Enum_HandAnim.uasset" 1160
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Enum_HandAnim.uexp" 1161
+"../../../Engine/Content/Animation/DefaultAnimBoneCompressionSettings.uasset" 1162
+"../../../Engine/Content/Animation/DefaultAnimBoneCompressionSettings.uexp" 1163
+"../../../Engine/Content/Animation/DefaultAnimCurveCompressionSettings.uasset" 1164
+"../../../Engine/Content/Animation/DefaultAnimCurveCompressionSettings.uexp" 1165
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand_Skeleton.uasset" 1166
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand_Skeleton.uexp" 1167
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_ThumbsUpMiddleOpen.uasset" 1168
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_ThumbsUpMiddleOpen.uexp" 1169
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_ThumbsUp.uasset" 1170
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_ThumbsUp.uexp" 1171
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_PointMiddleOpen.uasset" 1172
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_PointMiddleOpen.uexp" 1173
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Pointing.uasset" 1174
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Pointing.uexp" 1175
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Open.uasset" 1176
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Open.uexp" 1177
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_GripMiddleOpen.uasset" 1178
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_GripMiddleOpen.uexp" 1179
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Grip.uasset" 1180
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_Grip.uexp" 1181
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_FingerGun.uasset" 1182
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Animations/ANIM_QK_FingerGun.uexp" 1183
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Enum_ObjectType.uasset" 1184
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/Enum_ObjectType.uexp" 1185
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/BP_HandAnim.uasset" 1186
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/BP_HandAnim.uexp" 1187
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand_PhysicsAsset.uasset" 1188
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand_PhysicsAsset.uexp" 1189
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_N.uasset" 1190
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_N.uexp" 1191
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_N.ubulk" 1192
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_AORM.uasset" 1193
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_AORM.uexp" 1194
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_AORM.ubulk" 1195
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_BC.uasset" 1196
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_BC.uexp" 1197
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/T_QK_Glove_BC.ubulk" 1198
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/m_hand.uasset" 1199
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/m_hand.uexp" 1200
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand.uasset" 1201
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Hands/QK_CustomHand.uexp" 1202
+"../../../Engine/Content/EngineResources/Black.uasset" 1203
+"../../../Engine/Content/EngineResources/Black.uexp" 1204
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/M_XRController.uasset" 1205
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/M_XRController.uexp" 1206
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/MRTexture.uasset" 1207
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/MRTexture.uexp" 1208
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/MRTexture.ubulk" 1209
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/BaseTexture.uasset" 1210
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/BaseTexture.uexp" 1211
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/BaseTexture.ubulk" 1212
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/MI_OculusTouch_v2.uasset" 1213
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/MI_OculusTouch_v2.uexp" 1214
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/Right/right_OculusTouch_v2Controller.uasset" 1215
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/Right/right_OculusTouch_v2Controller.uexp" 1216
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/Left/left_OculusTouch_v2Controller.uasset" 1217
+"../../../Engine/Plugins/Runtime/OpenXR/Content/Devices/OculusTouch_v2/Left/left_OculusTouch_v2Controller.uexp" 1218
 "/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRPawn.uasset" 1219
 "/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRPawn.uexp" 1220
 "/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRGameMode.uasset" 1221
 "/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Blueprints/VRGameMode.uexp" 1222
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/StartMenu.uasset" 1223
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/StartMenu.uexp" 1224
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/StartMenuActor.uasset" 1225
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/StartMenuActor.uexp" 1226
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/StartingMap_BuiltData.uasset" 1227
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/StartingMap_BuiltData.uexp" 1228
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/StartingMap_BuiltData.ubulk" 1229
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/LostMenu.uasset" 1223
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/LostMenu.uexp" 1224
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/LostMenuActor.uasset" 1225
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/LostMenuActor.uexp" 1226
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/LostMap_BuiltData.uasset" 1227
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/LostMap_BuiltData.uexp" 1228
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/LostMap_BuiltData.ubulk" 1229
 "../../../Engine/Content/BasicShapes/Cube.uasset" 1230
 "../../../Engine/Content/BasicShapes/Cube.uexp" 1231
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/StartingMap.uexp" 1232
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/StartingMap.umap" 1233
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/VRTemplateMap_BuiltData.uasset" 1234
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/VRTemplateMap_BuiltData.uexp" 1235
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/VRTemplateMap_BuiltData.ubulk" 1236
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/StraightExit.uasset" 1237
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/StraightExit.uexp" 1238
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/StraightExitBlender.uasset" 1239
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/StraightExitBlender.uexp" 1240
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/Floor.uasset" 1241
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/Floor.uexp" 1242
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/FourExitBlender.uasset" 1243
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/FourExitBlender.uexp" 1244
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/ThreeExit.uasset" 1245
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/ThreeExit.uexp" 1246
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/ThreeExitBlender.uasset" 1247
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/ThreeExitBlender.uexp" 1248
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/CornerExit.uasset" 1249
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/CornerExit.uexp" 1250
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/CornerExitBlender.uasset" 1251
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/CornerExitBlender.uexp" 1252
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/NoExit.uasset" 1253
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/NoExit.uexp" 1254
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/ClosedWallsBlender.uasset" 1255
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/ClosedWallsBlender.uexp" 1256
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/OneExit.uasset" 1257
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/OneExit.uexp" 1258
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/OneExitBlender.uasset" 1259
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/OneExitBlender.uexp" 1260
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/Goal.uasset" 1261
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/Goal.uexp" 1262
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/Maze.uasset" 1263
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/Maze.uexp" 1264
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_top_PhysicsAsset.uasset" 1265
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_top_PhysicsAsset.uexp" 1266
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_bottom_Skeleton.uasset" 1267
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_bottom_Skeleton.uexp" 1268
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_bottom_PhysicsAsset.uasset" 1269
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_bottom_PhysicsAsset.uexp" 1270
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Sphere_col_PhysicsAsset.uasset" 1271
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Sphere_col_PhysicsAsset.uexp" 1272
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Domain_PhysicsAsset.uasset" 1273
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Domain_PhysicsAsset.uexp" 1274
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/Teeth_Material.uasset" 1275
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/Teeth_Material.uexp" 1276
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/oil.uasset" 1277
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/oil.uexp" 1278
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_top_Skeleton.uasset" 1279
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_top_Skeleton.uexp" 1280
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Sphere_col_Skeleton.uasset" 1281
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Sphere_col_Skeleton.uexp" 1282
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Domain_Skeleton.uasset" 1283
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Domain_Skeleton.uexp" 1284
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport.uasset" 1285
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport.uexp" 1286
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/Monster.uasset" 1287
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/Monster.uexp" 1288
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/VRTemplateMap.uexp" 1289
-"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/VRTemplateMap.umap" 1290
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/LostMap.uexp" 1232
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/LostMap.umap" 1233
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/BreakRoomMenu.uasset" 1234
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/BreakRoomMenu.uexp" 1235
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/BreakRoomMenuActor.uasset" 1236
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/BreakRoomMenuActor.uexp" 1237
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/BreakRoom_BuiltData.uasset" 1238
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/BreakRoom_BuiltData.uexp" 1239
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/BreakRoom_BuiltData.ubulk" 1240
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/BreakRoom.uexp" 1241
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/BreakRoom.umap" 1242
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/VRTemplateMap_BuiltData.uasset" 1243
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/VRTemplateMap_BuiltData.uexp" 1244
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/VRTemplateMap_BuiltData.ubulk" 1245
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_top_PhysicsAsset.uasset" 1246
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_top_PhysicsAsset.uexp" 1247
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_bottom_Skeleton.uasset" 1248
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_bottom_Skeleton.uexp" 1249
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_bottom_PhysicsAsset.uasset" 1250
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_bottom_PhysicsAsset.uexp" 1251
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Sphere_col_PhysicsAsset.uasset" 1252
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Sphere_col_PhysicsAsset.uexp" 1253
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Domain_PhysicsAsset.uasset" 1254
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Domain_PhysicsAsset.uexp" 1255
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/Teeth_Material.uasset" 1256
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/Teeth_Material.uexp" 1257
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/oil.uasset" 1258
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/oil.uexp" 1259
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_top_Skeleton.uasset" 1260
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Teeth_top_Skeleton.uexp" 1261
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Sphere_col_Skeleton.uasset" 1262
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Sphere_col_Skeleton.uexp" 1263
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Domain_Skeleton.uasset" 1264
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport_Domain_Skeleton.uexp" 1265
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport.uasset" 1266
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/source/spookumsUpload/spookumsfbxexport.uexp" 1267
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/Maze.uasset" 1268
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/Maze.uexp" 1269
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/Monster.uasset" 1270
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/scary-lovcraftian-toothy-oil-monster/Monster.uexp" 1271
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/ThreeExit.uasset" 1272
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/ThreeExit.uexp" 1273
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/ThreeExitBlender.uasset" 1274
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/ThreeExitBlender.uexp" 1275
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/StraightExit.uasset" 1276
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/StraightExit.uexp" 1277
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/StraightExitBlender.uasset" 1278
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/StraightExitBlender.uexp" 1279
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/OneExit.uasset" 1280
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/OneExit.uexp" 1281
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/OneExitBlender.uasset" 1282
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/OneExitBlender.uexp" 1283
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/Floor.uasset" 1284
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/Floor.uexp" 1285
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/FourExitBlender.uasset" 1286
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/FourExitBlender.uexp" 1287
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/CornerExit.uasset" 1288
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/CornerExit.uexp" 1289
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/CornerExitBlender.uasset" 1290
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/CornerExitBlender.uexp" 1291
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/NoExit.uasset" 1292
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeMeshes/NoExit.uexp" 1293
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/ClosedWallsBlender.uasset" 1294
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/NodeBPs/ClosedWallsBlender.uexp" 1295
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/Goal.uasset" 1296
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/Maze/Goal.uexp" 1297
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/VRTemplateMap.uexp" 1298
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/VRTemplateMap.umap" 1299
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/StartMenu.uasset" 1300
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/StartMenu.uexp" 1301
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/StartMenuActor.uasset" 1302
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/UI/StartMenuActor.uexp" 1303
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/StartingMap_BuiltData.uasset" 1304
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/StartingMap_BuiltData.uexp" 1305
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/StartingMap_BuiltData.ubulk" 1306
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/StartingMap.uexp" 1307
+"/Users/oliverursell/Documents/Unreal Projects/MazeGameTry2/Content/VRTemplate/Maps/StartingMap.umap" 1308
