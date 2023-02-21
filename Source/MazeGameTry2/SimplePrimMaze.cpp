@@ -120,6 +120,19 @@ void SimplePrimMaze::GenerateMaze(AMaze* Maze)
 		// Remove the Wall at the selected index from Walls
 		Walls.erase(Walls.begin() + SelectedIndex);
 	}
+
+	// Set the start position
+	Maze->Start = GetStartPosition(Maze);
+
+	// Set the end position
+	Maze->End = GetEndPosition(Maze, Maze->Start);
+	while(!Maze->End->WallExists())
+	{
+		// Keep going until you find a node that has a wall, otherwise the goal cannot be placed
+		Maze->End = GetEndPosition(Maze, Maze->Start);
+	}
+
+	Maze->MonsterStart = GetMonsterPosition(Maze, Maze->Start);
 }
 
 FMazeNode* SimplePrimMaze::GetStartPosition(AMaze* Maze)
@@ -184,8 +197,8 @@ FMazeNode* SimplePrimMaze::GetEndPosition(AMaze* Maze, FMazeNode* Start)
 		break;
 	case 1:
 		// Generate a point along the left or right
-		Random_X = std::rand() % Maze->Depth;
-		Random_Y = std::rand() % Edge_Depth/2;
+		Random_X = std::rand() % Maze->Depth/2;
+		Random_Y = std::rand() % Edge_Depth;
 		break;
 	default:
 		// We got a value outside of the expected values for Orientation

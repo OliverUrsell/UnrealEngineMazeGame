@@ -10,6 +10,7 @@
 #include "FMazeGenerator.h"
 #include "JsonObjectConverter.h"
 #include "Monster.h"
+#include "RandomWallRemovalMaze.h"
 #include "SimplePrimMaze.h"
 #include "GenericPlatform/GenericPlatformCrashContext.h"
 #include "Kismet/GameplayStatics.h"
@@ -41,7 +42,11 @@ AMaze::~AMaze()
 
 FMazeNode* AMaze::GetNodeAtPosition(FMazeCoordinates Coordinates) const
 {
-	//TODO: Add an assert here to check the coordinates are valid
+	// Returns nullptr if no node exists at that position
+	if(0 > Coordinates.Y || Coordinates.Y >= this->Nodes.size()) return nullptr;
+	
+	if(0 > Coordinates.X || Coordinates.X >= this->Nodes[Coordinates.Y].size()) return nullptr;
+	
 	return this->Nodes[Coordinates.Y][Coordinates.X];
 }
 
@@ -383,8 +388,7 @@ void AMaze::BeginPlay()
 
 	this->InitialiseNodes();
 	
-	SimplePrimMaze g = SimplePrimMaze();
-	this->ConfigureMaze(&g);
+	this->ConfigureMaze(new FRandomWallRemovalMaze(new SimplePrimMaze(), 20));
 	
 	this->SpawnMazeGridBPs();
 	

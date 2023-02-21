@@ -4,7 +4,7 @@
 #include "Maze.h"
 #include <cassert>
 
-FMazeNode::FMazeNode(const AMaze* Maze, FMazeCoordinates Coordinates, FNodeExits Exits)
+FMazeNode::FMazeNode(const AMaze* Maze, const FMazeCoordinates Coordinates, FNodeExits Exits)
 {
 	this->Maze = Maze;
 	this->Coordinates = Coordinates;
