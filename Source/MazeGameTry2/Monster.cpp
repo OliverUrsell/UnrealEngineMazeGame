@@ -28,15 +28,23 @@ void AMonster::Tick(const float DeltaTime)
 
 	GoalVector.Z = 0;
 
-	FVector GoalDirection = GoalVector;
-	GoalDirection.Normalize();
-	FVector NewLocation = CurrentLocation + (GoalDirection*this->Speed*DeltaTime);
+	FVector GoalMovementDirection = GoalVector;
+	GoalMovementDirection.Normalize();
+	FVector NewLocation = CurrentLocation + (GoalMovementDirection*this->Speed*DeltaTime);
 	NewLocation.Z = this->GoalNode->Maze->MonsterPositionHeight;
 
 	// Compare squared values to avoid a square root
 	if(GoalVector.SizeSquared() <= this->ThresholdMagnitude*this->ThresholdMagnitude) UpdateGoalLocation();
 
+	//TODO: don't update the location if there isn't much movement to be done, avoids jitter
 	this->SetActorLocation(NewLocation);
+
+	FRotator CurrentRotation = this->GetActorRotation();
+	FRotator GoalRotation = ToRotation(CurrentDirection);
+
+	FRotator RotationChange = (GoalRotation - CurrentRotation)*this->RotationSpeed*DeltaTime;
+	if(!RotationChange.IsNearlyZero()){this->SetActorRotation(CurrentRotation + RotationChange);}
+	
 }
 
 void AMonster::UpdateGoalLocation() const

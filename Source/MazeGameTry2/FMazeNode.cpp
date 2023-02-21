@@ -32,7 +32,6 @@ EMaze_Direction FMazeNode::GetRandomClosedWall() const
 	/* initialize random seed: */
 	std::srand (time(nullptr));
 	
-	// node.Coordinates.X += 1;
 	while (true)
 	{
 		const int Random_Number = std::rand() % 4;
