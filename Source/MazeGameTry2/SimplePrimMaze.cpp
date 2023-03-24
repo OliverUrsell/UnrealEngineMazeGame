@@ -172,7 +172,7 @@ FMazeNode* SimplePrimMaze::GetStartPosition(AMaze* Maze)
 		exit(1);
 	}
 
-	UE_LOG(LogTemp, Error, TEXT("Start Position: %d, %d"), Random_X, Random_Y);
+	UE_LOG(LogTemp, Log, TEXT("Start Position: %d, %d"), Random_X, Random_Y);
 	
 	return Maze->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Random_X), static_cast<float>(Random_Y)});
 }
@@ -232,7 +232,7 @@ FMazeNode* SimplePrimMaze::GetEndPosition(AMaze* Maze, FMazeNode* Start)
 		Out_Y = Maze->Width - Random_Y - 1;
 	}
 
-	UE_LOG(LogTemp, Error, TEXT("End Position: %d, %d"), Out_X, Out_Y);
+	UE_LOG(LogTemp, Log, TEXT("End Position: %d, %d"), Out_X, Out_Y);
 	return Maze->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Out_X), static_cast<float>(Out_Y)});
 }
 
@@ -276,6 +276,6 @@ FMazeNode* SimplePrimMaze::GetMonsterPosition(AMaze* Maze, FMazeNode* Start)
 		return nullptr;
 	}
 
-	UE_LOG(LogTemp, Error, TEXT("Monster Position: %d, %d"), Random_X, Random_Y);
+	UE_LOG(LogTemp, Log, TEXT("Monster Position: %d, %d"), Random_X, Random_Y);
 	return Maze->GetNodeAtPosition(FMazeCoordinates{static_cast<float>(Random_X), static_cast<float>(Random_Y)});
 }

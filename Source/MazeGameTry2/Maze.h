@@ -7,6 +7,7 @@
 #include <vector>
 
 #include "FMazeGenerator.h"
+#include "Monster.h"
 #include "ServerSocketClient.h"
 #include "GameFramework/Actor.h"
 #include "Maze.generated.h"
@@ -73,6 +74,12 @@ private:
 	const int PrefabBlueprintDepth = 2000 * BlueprintScale;
 	const int PrefabBlueprintWidth = 2000 * BlueprintScale;
 	ServerSocketClient* SC;
+
+	UPROPERTY()
+	AMonster* Monster;
+
+	UPROPERTY()
+	AActor* Player;
 
 public:
 	// Called every frame

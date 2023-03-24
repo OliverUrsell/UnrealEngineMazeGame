@@ -118,7 +118,6 @@ void ServerSocketClient::SendMessage(const FString Message) const
 {
     // Add a new line as a message delimiter 
     FString MessageToSend = Message + FString("\n");
-    // UE_LOG(LogTemp, Log, TEXT("Sending Message... %s"), *MessageToSend);
     //TODO: This might not send the whole message, see https://beej.us/guide/bgnet/html/#sendrecv about how send works
     send(this->Sockfd, TCHAR_TO_ANSI(*MessageToSend), MessageToSend.Len(), 0);
 }

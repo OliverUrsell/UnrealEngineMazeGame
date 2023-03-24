@@ -297,15 +297,13 @@ TSharedRef<FJsonObject> AMaze::PositionsJSON() const
 {
 	const TSharedRef<FJsonObject> JsonRootObject = MakeShareable(new FJsonObject);
 	
-	TArray<AActor*> FoundActors;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), VRPawn, FoundActors);
-	const FMazeCoordinates PlayerPosition = this->WorldLocationToMazeCoordinates(FoundActors[0]->GetActorLocation());
+	
+	const FMazeCoordinates PlayerPosition = this->WorldLocationToMazeCoordinates(Player->GetActorLocation());
 
 	JsonRootObject->SetNumberField("player_x", PlayerPosition.X);
 	JsonRootObject->SetNumberField("player_y", PlayerPosition.Y);
 	
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), MonsterBP, FoundActors);
-	const FMazeCoordinates MonsterPosition = this->WorldLocationToMazeCoordinates(FoundActors[0]->GetActorLocation());
+	const FMazeCoordinates MonsterPosition = this->WorldLocationToMazeCoordinates(Monster->GetActorLocation());
 
 	JsonRootObject->SetNumberField("monster_x", MonsterPosition.X);
 	JsonRootObject->SetNumberField("monster_y", MonsterPosition.Y);
@@ -338,8 +336,9 @@ void AMaze::ConfigureMaze(FMazeGenerator* Generator)
 
 	TArray<AActor*> FoundActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), VRPawn, FoundActors);
+	Player = FoundActors[0];
 	
-	FoundActors[0]->SetActorLocation(MazeStartPosition);
+	Player->SetActorLocation(MazeStartPosition);
 
 	// Spawn the goal at the end of the maze
 	const std::pair<FMazeCoordinates,FRotator> GoalPair = this->GetPositionAndRotationForGoal();
@@ -353,15 +352,14 @@ void AMaze::ConfigureMaze(FMazeGenerator* Generator)
 	// Spawn the monster somewhere in the maze
 	const std::pair<FMazeNode*,std::pair<EMaze_Direction, FRotator>> MonsterPair = GetMonsterStartingPositionAndRotation();
 	
-	AActor* Monster = GetWorld()->SpawnActor<AActor>(
+	Monster = static_cast<AMonster*>(GetWorld()->SpawnActor<AActor>(
 		MonsterBP,
 		MazeCoordinatesToWorldLocation(MonsterPair.first->Coordinates) + FVector{0, 0, this->MonsterPositionHeight},
 		MonsterPair.second.second
 	);
 
-	AMonster* SpawnedMonster = static_cast<AMonster*>(Monster);
-	SpawnedMonster->DirectionChanged(MonsterPair.second.first);
-	SpawnedMonster->GoalNode = MonsterPair.first;
+	Monster->DirectionChanged(MonsterPair.second.first);
+	Monster->GoalNode = MonsterPair.first;
 }
 
 void AMaze::SpawnMazeGridBPs() const
@@ -430,14 +428,9 @@ void AMaze::Tick(float DeltaTime)
 	}
 
 	const FString Message = std::get<0>(MessageRead);
-
-	// UE_LOG(LogClass, Log, TEXT("Message: %s"), *Message);
 	
 	if(Message.StartsWith(SC->MazeCode + " MonsterDirection "))
 	{
-		TArray<AActor*> FoundActors;
-		UGameplayStatics::GetAllActorsOfClass(GetWorld(), MonsterBP, FoundActors);
-		AMonster* Monster = static_cast<AMonster*>(FoundActors[0]);
 		const FString Direction =  Message.Mid(22);
 		UE_LOG(LogClass, Log, TEXT("Message: \"%s\""), *Direction);
 
