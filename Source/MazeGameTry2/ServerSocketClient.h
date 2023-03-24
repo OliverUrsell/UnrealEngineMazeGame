@@ -10,9 +10,10 @@ class ServerSocketClient
 {
 private:
 	int Sockfd;
-	static ServerSocketClient* Singleton;
 	bool Connected = false;
 	void Disconnected();
+protected:
+	static ServerSocketClient* Singleton;
 public:
 	static void* Get_In_Addr(sockaddr* Sa);
 	int Connect();

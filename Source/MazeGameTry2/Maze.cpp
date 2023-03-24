@@ -356,7 +356,7 @@ void AMaze::ConfigureMaze(FMazeGenerator* Generator)
 		MonsterBP,
 		MazeCoordinatesToWorldLocation(MonsterPair.first->Coordinates) + FVector{0, 0, this->MonsterPositionHeight},
 		MonsterPair.second.second
-	);
+	));
 
 	Monster->DirectionChanged(MonsterPair.second.first);
 	Monster->GoalNode = MonsterPair.first;
