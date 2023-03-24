@@ -40,11 +40,8 @@ void MazeTest::Define()
     // Code to run before each test
     BeforeEach([this]()
     {
-        UE_LOG(LogTemp, Display, TEXT("Here in the test method -3"));
         // Create a mock socket so we don't need to connect to a real server
         MockServerSocketClient();
-
-        UE_LOG(LogTemp, Display, TEXT("Here in the test method -2"));
         
         // Open the game map to test with
         AutomationOpenMap("/Game/VRTemplate/Maps/VRTemplateMap.VRTemplateMap");
@@ -56,15 +53,12 @@ void MazeTest::Define()
         TArray<AActor*> FoundActors;
         UGameplayStatics::GetAllActorsOfClass(World, AMaze::StaticClass(), FoundActors);
         Maze = static_cast<AMaze*>(FoundActors[0]);
-        UE_LOG(LogTemp, Display, TEXT("Here in the test method -1"));
     });
 
     // Code to run after each test
     AfterEach([this]()
     {
-        UE_LOG(LogTemp, Display, TEXT("Here in the test method 5"));
         Exit();
-        UE_LOG(LogTemp, Display, TEXT("Here in the test method 6"));
         // Maze->Destroy();
     });
 
@@ -72,10 +66,8 @@ void MazeTest::Define()
     {
         It("Should decide on a start node", [this]()
         {
-            UE_LOG(LogTemp, Display, TEXT("Here in the test method"));
-            // TestNotNull("The Maze Start attribute should not be null", Maze->Start);
-            TestEqual("Should be equal", 1, 1);
-            UE_LOG(LogTemp, Display, TEXT("Here in the test method 2"));
+            TestNotNull("The Maze Start attribute should not be null", Maze->Start);
+            // TestEqual("Should be equal", 1, 1);
             // TestEqual("ShootBullet should only creates one bullet", ShooterA->NumberOfBulletShot, 1);
             // TestTrue("bIsBulletShot should be changed to true", ShooterA->bIsBulletShot);
             // TestNotNull("Bullet reference in ShooterA should be valid", ShooterA->ShotBullet);
@@ -83,10 +75,8 @@ void MazeTest::Define()
         
         It("Should decide on a goal node", [this]()
         {
-            UE_LOG(LogTemp, Display, TEXT("Here in the test method 3"));
-            // TestNotNull("The Maze End attribute should not be null", Maze->End);
-            TestEqual("Should be equal 2", 2, 1);
-            UE_LOG(LogTemp, Display, TEXT("Here in the test method 4"));
+            TestNotNull("The Maze End attribute should not be null", Maze->End);
+            // TestEqual("Should be equal 2", 2, 1);
             // TestEqual("ShootBullet should only creates one bullet", ShooterA->NumberOfBulletShot, 1);
             // TestTrue("bIsBulletShot should be changed to true", ShooterA->bIsBulletShot);
             // TestNotNull("Bullet reference in ShooterA should be valid", ShooterA->ShotBullet);

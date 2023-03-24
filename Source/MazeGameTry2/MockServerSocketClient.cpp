@@ -22,7 +22,6 @@ void MockServerSocketClient::CloseSocket() const
 
 void MockServerSocketClient::SendMessage(const FString Message) const
 {
-	UE_LOG(LogTemp, Display, TEXT("Here in the test method lalalala"));
 }
 
 std::tuple<FString, int> MockServerSocketClient::ReadMessage()

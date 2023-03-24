@@ -432,7 +432,6 @@ void AMaze::Tick(float DeltaTime)
 	if(Message.StartsWith(SC->MazeCode + " MonsterDirection "))
 	{
 		const FString Direction =  Message.Mid(22);
-		UE_LOG(LogClass, Log, TEXT("Message: \"%s\""), *Direction);
 
 		//TODO: cannot use a switch statement on FString
 		if (Direction.Equals(FString("north")))
